@@ -4,3 +4,9 @@ var init = function () {
     console.log("init() called");
 };
 $(document).ready(init);
+$(function(){
+    $('#screen').live('swiperight',function(){
+        console.log("swipe right");
+        $('#sidepanel').panel("open");
+    });
+});
