@@ -1,0 +1,44 @@
+{
+    "child": [
+        {
+            "name": "page",
+            "selector": "div:jqmData(role='page')",
+            "ex-path": "ex/",
+            "ex-css": [],
+            "ex-js": [],
+            "inner-html": ""
+        },
+        {
+            "name": "content",
+            "selector": "div:jqmData(role='content')",
+            "ex-path": "ex/",
+            "ex-css": ["ex.css"],
+            "ex-js": [],
+            "inner-html": ""
+        },
+        {
+            "name": "header",
+            "selector": "div:jqmData(role='header')",
+            "ex-path": "ex/",
+            "ex-css": [],
+            "ex-js": [],
+            "inner-html": "header.html"
+        },
+        {
+            "name": "sidebar",
+            "selector": "div.sidebar",
+            "ex-path": "ex/",
+            "ex-css": [],
+            "ex-js": [],
+            "inner-html": ""
+        },
+        {
+            "name": "main",
+            "selector": "div.main",
+            "ex-path": "ex/",
+            "ex-css": [],
+            "ex-js": [],
+            "inner-html": ""
+        }
+    ]
+}

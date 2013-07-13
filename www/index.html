@@ -21,14 +21,22 @@
 <body>
     <div data-role="page" id="screen">
     	<div data-role="panel" id="sidepanel">
-    		this is a panel
+            <div data-role="listview">
+                <li><a href="#week1" data-rel="popup" data-transition="slide" data-transition="turn">Week 1</a></li>
+                <li>Week 2</li>
+                <li>Week 3</li>
+                <li>Week 4</li>
+                <li>Week 5</li>
+                <li>Week 6</li>
+                <li>Week 7</li>
+            </div>
     	</div>
         <div data-role="header" >
             <h1>Single-Page Application</h1>
         </div><!-- /header -->
 
         <div data-role="content" id="content">
-                
+            <div data-role="popup" id="week1">this is test popup</div>
         </div><!-- /content -->
 
         <div data-role="footer" data-position="fixed" >
