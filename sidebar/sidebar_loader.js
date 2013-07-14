@@ -99,6 +99,7 @@ var initSidebar = function () {
         }
         return vertical;
     }
-    alert(loadChapter('../data/2013_Spring_Tsinghua/'));
+    return getHierarchy('../data/2013_Spring_Tsinghua/');
 }
-initSidebar();
+var obj = initSidebar();
+//alert(obj);
