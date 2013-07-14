@@ -1,6 +1,0 @@
-{"CourseName":"CS169.1x Software as a Service",
-"CourseArrangement":[{"id":"0","WeekName":"Overview"},{"id":"1","WeekName":"week 1"},
-{"id":"2","WeekName":"week 2"},{"id":"3","WeekName":"week 3"},
-{"id":"4","WeekName":"week 4"},{"id":"5","WeekName":"week 5"},{"id":"6","WeekName":"week 6"}],
-"From":"BerkeleyX"
-}
