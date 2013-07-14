@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 2-6">
+  <text>
+    <p>Which of the following is an invalid statement regarding <code>render</code> and <code>redirect_to</code>?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span><code>render</code> doesn't send a new request but <code>redirect_to</code> does</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="2">
+          <text>
+            <span><code>redirect_to</code> doesn't send a new request but <code>render</code> does</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span><code>render</code> will not cause the current action to stop executing</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span><code>redirect_to</code> will not cause the current action to stop executing</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

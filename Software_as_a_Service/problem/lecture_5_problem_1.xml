@@ -1,0 +1,27 @@
+<problem display_name="Lecture 5 Problem 1: Scrum">
+  <p>Which expression statement regarding SCRUM is TRUE?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="true">
+        <text>
+          <span style="color: #F90;"> Scrum is at its best when it is difficult to plan ahead </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;"> Scrum is good for safety critical software as well as SaaS </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;"> Scrum implies Agile software development practices like TDD </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;"> All of the above are true </span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

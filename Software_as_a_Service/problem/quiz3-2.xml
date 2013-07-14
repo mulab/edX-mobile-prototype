@@ -1,0 +1,29 @@
+<problem max_attempts="1">
+  <text>
+    <p>When using JavaScript for client-side form validation, which is NOT true?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>JavaScript code can inspect DOM element attributes to see what the user typed</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>JavaScript code can prevent the "Submit" button from submitting the form</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>Validations that are impractical to perform on client (for example, zip code validation) may still be done on server</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="4">
+          <text>
+            <span>It reduces work for the server, since the server doesnt have to repeat validations already performed by JavaScript</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

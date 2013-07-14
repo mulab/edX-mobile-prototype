@@ -1,0 +1,19 @@
+<problem display_name="L7P1: Debugging" rerandomize="never" showanswer="never">
+  <p>If you use <code>puts</code> or <code>printf</code> to print debugging messages in a production app,</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>Your app will raise an exception and grind to a halt.</text>
+      </choice>
+      <choice correct="true">
+        <text>Your app will continue, but the messages will be lost forever.</text>
+      </choice>
+      <choice correct="false">
+        <text>Your app will continue, and the messages will go into the log file.</text>
+      </choice>
+      <choice correct="false">
+        <text>The SaaS gods will strike you down in a fit of rage.</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

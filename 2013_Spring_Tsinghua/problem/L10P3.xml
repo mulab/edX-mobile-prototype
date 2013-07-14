@@ -1,0 +1,20 @@
+<problem display_name="L10P3: RSpec Seams" rerandomize="never" showanswer="attempted">
+  <p>Which is <i>false</i> about <code>should_receive</code>?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text> It provides a stand-in for a real method that doesn’t exist yet</text>
+      </choice>
+      <choice correct="false">
+        <text> It would override the real method, even if it did exist</text>
+      </choice>
+      <choice correct="true">
+        <text> It can be issued either before or after the code that should make the call
+        </text>
+      </choice>
+      <choice correct="false">
+        <text> It exploits Ruby’s open classes and metaprogramming to create a seam</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

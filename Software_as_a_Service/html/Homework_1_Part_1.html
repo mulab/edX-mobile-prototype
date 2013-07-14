@@ -1,0 +1,53 @@
+<h1>Part 1</h1><h3>Due Sunday, November 25th</h3><h2> 0. Getting set up</h2><p>In these steps you'll download Typo, get it running on your local system, verify that its test suite passes, and do a test deployment to Heroku.</p><ol><li>Install Typo locally
+      <ol><li><a href="https://help.github.com/articles/fork-a-repo">
+            Fork</a> the Typo repository: <a href="https://github.com/saasbook/typo">https://github.com/saasbook/typo</a>
+          (Typo is open source, but we have snapshotted the repo including fixing some failing tests and using a stable revision for Ruby 1.9.2)</li><li>Clone your forked Typo repository into a folder on your local machine.</li><li>Run bundle install --without production in the Typo directory.</li><li>Run the database migration in the Typo directory (<pre>rake db:migrate</pre>).</li><li>Load the seed data into the database (<pre>rake db:seed</pre>).</li></ol>
+    </li><li>Get the Typo test suite and make sure all specs pass green. Pending specs are fine.
+      <ol><li>Run <pre>rake spec</pre> and <pre>rake cucumber</pre> in the Typo directory.</li></ol>
+    </li><li>Make sure Typo can be deployed to Heroku. Typo wasn't built with Heroku in mind, but the changes needed to deploy to Heroku have already been made in our fork of the Typo repository.
+      <br/>
+      From within your copy of the Typo repository, run:
+      <pre>
+        heroku create
+        git push heroku master
+        heroku run rake db:migrate
+        heroku run rake db:seed</pre>
+    </li></ol><h1>1. Specify features</h1><p>We want to add a useful feature called article merging.  When there are multiple bloggers on one
+    site, the authors may write more than one article on the same topic and say similar things.  The
+    user will be able to visit the article view, and, if they are an admin, there should be a form on that
+    article's edit page that allows an administrator to enter in the ID of another article to merge the 
+    current article with.  When this happens, we want to preserve both articles' content, but merge 
+    them together into one article. You should verify that both specified articles exist, and that they 
+    are not the same article.</p><h3>Specifications:</h3><ol><li>A non-admin cannot merge articles.</li><li>When articles are merged, the merged article should contain the text of both previous articles.</li><li>When articles are merged, the merged article should have one author (either one of the authors of the two original articles).</li><li>Comments on each of the two original articles need to all carry over and point to the new, merged article.</li><li>The title of the new article should be the title from either one of the merged articles.</li><li>The form field containing the ID of the article to merge with must have the HTML attribute 
+      <code>name</code> set to <code>merge_with</code>. This requirement is present for the sole purpose of allowing 
+      the autograder to identify the merge functionality in your deployed application and is not 
+      something you would normally do in Rails. There should be exactly one input element 
+      with the name merge_with on the edit article page.</li></ol><p>Start by <b>writing cucumber scenarios for the above behaviors.</b> You will probably want to put them in separate feature files but you may 
+    add them to the existing feature files. Over the rest of part 1 and all of part 2 we will make these go green.</p><p>Below is a mockup for the merge articles interface [<a href="http://imgur.com/Ujmdh">hi-res</a>].
+    The form for merging articles should be on the edit page for an article and it should let the user input the id of the article to be merged with.
+    The merge interface should not be presented for new articles nor to non-administrators, but it is fine for the merge articles functionality to be present for drafts (we will not conduct any tests using draft articles).</p><img src="https://lh4.googleusercontent.com/PndYaWhSYWTLL44Z3RhF-2PRskE1eSHhQt0Ar0ZGQ1C0cgaJh_cDXcsXI_0yaS_7qzMc3cJDNQ8IrT_UBzaKlR_03HRXmwhAZw24wb1VbJ25"/><p>Tip: Nesting &lt;tags&gt; is invalid in HTML. Most browsers will only accept the outermost form tag. Be careful of which views you edit: a view partial may be rendered while inside of another
+    form tag, so creating another form inside of it would be invalid.</p><h1>2. Start driving changes through specs</h1><p>Starting with scenarios 1 and 2 above, you will create the Cucumber tests to drive the code
+    changes for each scenario. The second one will be toughest, because you will have to create 
+    the basic functionality that allows merging to happen. Subsequent specs will be easier as they 
+    will require only incremental code.</p><br/>
+  For Scenarios 1 and 2:
+  <ol><li>Start by implementing the step definitions that will show an admin (but not a regular user) 
+      a "Merge With This Article" button which, when clicked, will dispatch to a controller action that does the merge.</li><li>Let those step definitions drive the creation of controller specs, as we did in the example 
+      in ELLS chapter 5.  Obviously the merging functionality itself should go in the model, not 
+      the controller, so feel free to assume an instance method of the <pre>Article</pre> model 
+      <pre>merge_with(other_article_id)</pre>.  Eventually, this method will return an article object 
+      that is the merged article, and also handles all of the considerations above. Get these 
+      specs to pass green.  Commit.</li></ol>
+  <p><span style="color: red">Warning:</span>Recall that Rails models can have :has_many and :belongs_to relationships.
+    Recall also that :dependent =&gt; :destroy is an option that sometimes is used in the 
+    <pre>:has_many</pre> relationship.  When this is used, if the main object is destroyed, all of the associated 
+    objects that belong to the main object are also destroyed.  If you were to load an article and 
+    assign its comments to a second article, and then destroy the first article, be aware that you 
+    may inadvertently destroy all of the comments, because these associations are cached.  You 
+    should check the article model to see if the :dependent =&gt; :destroy option is included, and if 
+    so, you will need to account for it, either by reloading the first article prior to destroying it, or by 
+    some other approach.</p>
+  <br/>
+  When you are finished, you should have the following:
+  <ul><li>Typo passing all tests,  both Cucumber and Rspec.</li><li>Specs to verify that the controller behaves correctly when non-admins attempt to merge articles passing green.</li><li>Specs to verify that the model's merge method combines the given articles correctly passing green.</li><li>Modifications to the models, views, and controllers necessary to merge articles</li><li>Cucumber scenarios "A non-admin cannot merge two articles" and "When articles are merged, the merged article should contain the text of both previous articles" passing green</li></ul>
+  <b>Good job! At this point you are ready to submit part 1 of homework 1.</b>

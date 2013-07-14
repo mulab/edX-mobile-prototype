@@ -1,0 +1,19 @@
+<problem display_name="L11P2: Implicit Requirements" rerandomize="never" showanswer="attempted">
+  <p>Which statement(s) are <i>true</i> about implicit requirements?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="true">
+        <text> The are often, but not always, derived from explicit requirements</text>
+      </choice>
+      <choice correct="false">
+        <text> They apply only to unit and functional tests, not integration tests</text>
+      </choice>
+      <choice correct="false">
+        <text> Testing them is lower priority than testing explicit requirements, since they don't come from the customer </text>
+      </choice>
+      <choice correct="false">
+        <text> All of the above are true</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

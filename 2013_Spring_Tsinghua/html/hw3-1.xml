@@ -1,0 +1,22 @@
+<html>
+  <h2>Create a declarative scenario step for adding movies</h2>
+  <p>As explained in Section 4.7 of Engineering Long-Lasting Software, the goal of BDD is to
+express behavioral tasks rather than low-level operations.</p>
+  <p>
+The background step of all the scenarios in this homework requires that the movies database
+contain some movies. Analogous to the explanation in Section 4.7, it would go against the goal
+of BDD to do this by writing scenarios that spell out every interaction required to add a new
+movie, since adding new movies is not what these scenarios are about.
+</p>
+  <p>Recall that the Given steps of a user story specify the initial state of the system; it doesn't
+matter how the system got into that state. For part 1, therefore, you will create a step 
+definition that will match the step, "Given the following movies exist" in the Background section of 
+both <code>sort_movie_list.feature</code> and <code>filter_movie_list.feature</code>. (Later in the course, we
+will show how to DRY out the repeated Background sections in the two feature files.)</p>
+  <p>Add your code in the <code>movie_steps.rb</code> step definition file. You can just use ActiveRecord
+calls to directly add movies to the database; it's OK to bypass the GUI associated with creating
+new movies, since that's not what these scenarios are testing.
+</p>
+  <p><i>Success</i> is when all Background steps for the scenarios in <code>filter_movie_list.feature</code>
+and <code>sort_movie_list.feature</code> are passing green.</p>
+</html>

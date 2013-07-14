@@ -1,0 +1,38 @@
+<problem max_attempts="1" display_name="Quiz 1-3">
+  <startouttext/>
+  <p>Which of the following ActiveRecord lifecycle callbacks ("hooks") could get called when an 
+      ActiveRecord operation calls "<span style="font-size:larger"><code>create</code></span>" (i.e. <span style="font-size:larger"><code>movie.create</code></span>)? Select all that apply.</p>
+  <endouttext/>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="true">
+        <text>
+          <span style="font-size:larger">
+            <code>before_validation</code>
+          </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="font-size:larger">
+            <code>after_validation</code>
+          </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="font-size:larger">
+            <code>before_save</code>
+          </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="font-size:larger">
+            <code>after_save</code>
+          </span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

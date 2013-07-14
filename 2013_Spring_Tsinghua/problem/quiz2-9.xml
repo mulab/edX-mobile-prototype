@@ -1,0 +1,25 @@
+<problem attempts="1" display_name="quiz 2-9">
+  <text>
+    <p>If a user enters values in a view, and then those values get sent to the controller as <tt>params['movie']['title']</tt>, those 
+    values are accessible to the controller action during</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>this request only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>this request and the next request</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>this request and all subsequent requests</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

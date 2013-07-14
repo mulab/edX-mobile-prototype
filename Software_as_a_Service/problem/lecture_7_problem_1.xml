@@ -1,0 +1,29 @@
+<problem display_name="Lecture 7 Problem 1: Design Patterns">
+  <startouttext/>
+  <p>Which statement is FALSE?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" randomize="yes">
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">Software that uses more design patterns isn't necessarily better.</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">Well-designed software can evolve to the point where patterns become antipatterns.</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">Trying to apply design patterns too early can be just as bad as applying them too late.</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;">Most design patterns are specific to particular subset of programming languages.</span>
+        </text>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

@@ -1,0 +1,78 @@
+<html>
+  <h2>Adding director info to RottenPotatoes</h2>
+  <p>Your new feature will be a "search for movies by director"  feature. It will
+      provide a link on each movie-details pages that, when clicked, displays a
+      list of movies by the director on the page. To create this feature, follow 
+      the steps below.</p>
+  <ol>
+    <li>Setup Cucumber and RSpec.
+        <ul><li>Make sure your Gemfile contains <a href="http://pastebin.com/HnHbnaZD">
+              these changes from Section 4.4 of ELLS</a>, as well as the line
+            <pre>gem 'rspec-rails'</pre> within the <code>group :test, :development</code> block.</li><li>Run <code>bundle install --without production</code> to make sure
+            the gems are properly installed.</li><li>If necessary, set up the Cucumber directories (under
+            <code>features/</code>)
+            and the RSpec directories (under <code>spec/</code>), allowing
+            overwrite of any existing files, by running the commands
+            <pre>rails generate cucumber:install capybara</pre>
+            <pre>rails generate cucumber_rails_training_wheels:install</pre>
+            <pre>rails generate rspec:install</pre>
+          </li><li>Double-check that everything was installed by running the tasks
+            <pre>rake spec</pre> and <pre>rake cucumber</pre>.  Since presumably
+            you have no features or specs yet, both tasks should execute correctly
+            and report that there are zero tests to run. Depending on your version
+            of <code>RSpec</code>, it may also display a message stating that it was
+            not able to find any <code>'_spec.rb'</code> files.</li></ul>
+      </li>
+    <li>Create and apply a migration that adds the <code>director</code> field 
+        to the movies table. The <code>director</code> field   should be a string 
+        containing the name of the movie's director. <br/><br/>
+        <i>Hint</i>: Use the <code>add_column</code>
+        method of <code>ActiveRecord::Migration</code> to do this. Remember that 
+        once the migration is applied, you also have to run 
+        <pre>rake db:test:prepare</pre>
+         to load
+        the new post-migration schema into the test database!</li>
+    <br/>
+    <li>Create controller and model specs.
+        <ul><li>We've provided <a href="http://pastebin.com/L6FYWyV7">three Cucumber scenarios</a>
+            as a high level description of the happy path of "search for movies by director":
+            <ul style="padding-left:2em;list-style-type:circle"><li>The first scenario tests the functionality for adding director info to an 
+                existing movie.  Implementing this doesn't require creating any new views 
+                or controller actions, but it does require (1) modifying existing views, (2) 
+                creating a new step definition, and (3) possibly adding a line or two to
+                <code>features/support/paths.rb.</code></li><li>The second scenario tests the functionality for clicking a "Find Movies 
+                With Same Director" link on the movie-details page for a movie that has 
+                director info in the database.  For this scenario, you'll have to modify the 
+                existing "Show Movie" view, and you'll have to add a route, view and 
+                controller method for "find movies with same director".</li><li>The third scenario handles the sad path when the current movie has no 
+                director info but we try to follow  "Find Movies With Same Director" 
+                anyway.</li></ul></li><li>Going one Cucumber step at a time, use RSpec to create the appropriate 
+            controller and model specs to drive the creation of the new controller and model 
+            methods.  You will need to write tests to drive the creation of
+            <ul style="padding-left:2em;list-style-type:circle"><li>a RESTful route for "find similar movies" (<i>Hint</i>: Use the 'match' syntax for 
+                routes as suggested in "Non-Resource-Based Routes" at the end of 
+                section 3.9 of ELLS),</li><li>a controller method to receive the click on "Find Movies With Same 
+                Director", and grab the id (for example) of the current movie (i.e. the one 
+                we're trying to find movies similar to), and</li><li>a model method in the <code>Movie</code> model to find movies whose director 
+                matches that of the current movie.</li></ul></li><li>It's up to you to decide whether you want to handle the sad path of "no director" in 
+            the controller method or in the model method, but you must provide a test for 
+            whichever one you do. Remember to include the line <pre>require 'spec_helper'</pre>
+            at the top of your <code>_spec.rb</code> files.</li></ul>
+      </li>
+  </ol>
+  <p>Once you have finished creating your feature, use SimpleCov  to generate a report of your code coverage. 
+      To do this, first make sure that the line 
+      <pre>gem 'simplecov'</pre> exists in your Gemfile. Add the following code:
+  <pre>      require 'simplecov'
+      SimpleCov.start 'rails'</pre>to the <b>top</b> of
+      "<code>spec/spec_helper.rb</code>" and "<code>features/support/env.rb</code>". 
+      Now when you run 
+      <pre>rake spec</pre>
+      or <pre>rake cucumber</pre>
+      SimpleCov  will generate a report in a directory named "<code>coverage/</code>".
+      Since both RSpec and Cucumber are so widely used, SimpleCov can intelligently merge the results,
+      so running the tests for Rspec will not overwrite the coverage 
+      results from SimpleCov and vice versa. See the 
+      <a href="http://vimeo.com/34754907">screencast</a> for 
+      step-by-step instructions on setting up SimpleCov.</p>
+</html>

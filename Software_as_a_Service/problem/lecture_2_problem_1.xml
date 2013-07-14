@@ -1,0 +1,27 @@
+<problem display_name="Validations and Filters" rerandomize="never">
+  <p>We want to model students having appointments with faculty members. Our model would include which relationships:</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="true">
+        <text>
+          <span style="color: #F90;"> Faculty has-many appointments, Student has-many appointments </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;"> Faculty HABTM Students, Students HABTM Faculty </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;"> Faculty belongs-to appointment, Student belongs-to appointment</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;"> Faculty has-many appointments, through Students</span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

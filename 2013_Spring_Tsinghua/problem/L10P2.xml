@@ -1,0 +1,19 @@
+<problem display_name="L10P2: Model Methods" rerandomize="never" showanswer="attempted">
+  <p>The method that contacts TMDb to search for a movie should be</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="true">
+        <text> a class method of the <code>Movie</code> model</text>
+      </choice>
+      <choice correct="false">
+        <text> an instance method of the <code>Movie</code> model</text>
+      </choice>
+      <choice correct="false">
+        <text> a controller method</text>
+      </choice>
+      <choice correct="false">
+        <text> a helper method</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

@@ -1,0 +1,29 @@
+<problem display_name="Lecture 10 Problem 1: Client Side Validation">
+  <startouttext/>
+  <p>When using JavaScript for client-side form validation, which is NOT true?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" randomize="yes">
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">JavaScript code can inspect DOM element attributes to see what the user typed</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">JavaScript code can prevent the "Submit" button from submitting the form</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">Some validations may be impractical to perform on client, so must be done on server</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;">The server doesn't have to repeat the validations performed by JavaScript</span>
+        </text>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

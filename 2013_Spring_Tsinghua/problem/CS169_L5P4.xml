@@ -1,0 +1,10 @@
+<problem display_name="L6P4: The Session" rerandomize="never" showanswer="never"><p>Ben Bitdiddle claims:</p><center>You can put arbitrary objects (not just "simple" ones like ints and strings) into the <code>session[]</code>.</center><p>What do you think?</p>
+ <choiceresponse rerandomize="never">
+    <radiogroup>
+      <choice correct="false"><text>True, knock yourself out!</text></choice>
+      <choice correct="true"><text>True, but a bad idea!</text></choice>
+      <choice correct="false"><text>False, because you can't put arbitrary objects into a hash.</text></choice>
+      <choice correct="false"><text>False, because <code>session[]</code> isn't really a hash, it just quacks like one.</text></choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

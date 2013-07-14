@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 2-2">
+  <text>
+    <p>A ----- refers to a single ----- with one or more -----, each of which is composed of a sequence of -----.</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>feature, step, user stories, scenarios</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>feature, scenario, steps, user stories</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>user story, feature, scenarios, steps</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>user story, scenario, features, steps</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

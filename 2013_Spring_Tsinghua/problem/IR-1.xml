@@ -1,0 +1,131 @@
+<problem display_name="Deploy RottenPotatoes and Enhancement #1">
+  <startouttext/>
+  <p>
+    <b>
+      <i>Part A —Add some movies to RottenPotatoes, and deploy it to the world</i>
+    </b>
+  </p>
+  <p>We have a version of RottenPotatoes that has had some slight modifications for successful
+deployment on Heroku, and to which we've added an additional handful of movies to make things more
+interesting. Check out the app on your VM (or other development environment) by running the following commands:
+</p>
+  <pre>
+git clone git://github.com/saasbook/hw2_rottenpotatoes.git
+cd hw2_rottenpotatoes</pre>
+  <p>
+The first command will pull down the latest version of the RottenPotatoes starter code, and the second will move you into the directory which now contains the code.
+</p>
+  <p>The next step is to install the necessary gems for the app. Do this by running</p>
+  <pre>bundle install --without production</pre>
+  <p>The <code> --without production</code>part of the command causes the installer to ignore the
+PostgreSQL gem for your local installation (since that gem will cause problems if you're using a
+development environment without PostgreSQL installed).</p>
+  <p>
+Note that we provided a seed file that seeds the database with a bunch of movies. Take a look
+at the code in <code>db/seeds.rb</code> to review how these work. When you're ready, run</p>
+  <pre>rake db:migrate</pre>
+  <p>to apply all RottenPotatoes migrations to your local database. Then run</p>
+  <pre>rake db:seed</pre>
+  <p>to seed your local database with the movies from the seed file.</p>
+  <p>Verify that you can successfully run the app by using the command</p>
+  <pre>rails server</pre>
+  <p>If this works properly, you should be able
+to interact with RottenPotatoes via a web browser as described in the book and in lecture. Check that you can see a list of all the
+movies when you access 'localhost:3000/movies'.</p>
+  <p>Once the above steps have been verified on your development computer, it's time to deploy on Heroku.
+Create a free <a href="http://www.heroku.com">Heroku.com</a> account if you haven't already, and deploy RottenPotatoes
+there. Appendix A in the textbook has more information about this procedure, and Heroku has detailed 
+<a href="https://devcenter.heroku.com/articles/quickstart">help pages</a> as well.
+(Note that your app's name, <i>something.herokuapp.com</i>, must be unique among
+Heroku apps. It's therfore unlikely that the name "rottenpotatoes" will be available. You must 
+either choose a different name or you may just keep the default name Heroku chooses for you when 
+you create a new app.)
+</p>
+  <p>
+Since this is the first deployment of this app on Heroku, its database will be empty. To fix this,
+<i>after</i> you've pushed your app to Heroku, run</p>
+  <pre>heroku run rake db:migrate</pre>
+  <p>to apply all RottenPotatoes migrations. In this case, we only have one migration file that creates the
+<code>Movies</code> table (which had already been applied when you got your VM). You will also need to
+run</p>
+  <pre>heroku run rake db:seed</pre>
+  <p>to seed your Heroku app's database with the movies we've created in <code>seeds.rb</code>.</p>
+  <p>Visit your site at <i>your-app-name.herokuapp.com/movies</i> to verify that it’s working.</p>
+  <hr/>
+  <p>
+    <b>
+      <i>Part B — RottenPotatoes Enhancement #1: Sorting the list of all movies</i>
+    </b>
+  </p>
+  <p>You will enhance RottenPotatoes in the following ways:</p>
+  <ul>
+    <li> On the "All Movies" page, the column headings for "Movie Title" and "Release
+Date" for a movie should be clickable links. Clicking one of them should cause the list
+to be reloaded but sorted in ascending order on that column. Namely,
+    <ul><li>clicking the "Movie Title" column should list the movies alphabetically by
+title (for movies whose names begin with non-letters, the sort order should match the
+behavior of <code>String#&lt;=&gt;</code>), and</li><li>clicking the "Release Date" column heading should redisplay the list of movies with the earliest-released movies first.</li></ul>
+    </li>
+    <li>
+When the listing page is redisplayed with sorting-on-a-column enabled, the column
+header that was selected for sorting should appear with a yellow background, as shown
+below. You should do this by setting controller variables that are used to conditionally
+set the CSS class of the appropriate table heading to <code>hilite</code>, and pasting this simple
+<a href="http://pastebin.com/zRkyVWZM">CSS snippet</a> into RottenPotatoes's <code>app/assets/stylesheets/application.css</code> file.
+    </li>
+  </ul>
+  <center>
+    <img src="/c4x/BerkeleyX/CS169.1x/asset/images_HW2_Images_sortedHW2.png"/>
+  </center>
+  <b>
+    <i>Important for grading purposes</i>
+  </b>
+  <ul>
+    <li>The link (that is, the <code>&lt;a&gt;</code> tag) for sorting by "Movie Title" should have the HTML element
+id <code>title_header</code>.
+</li>
+    <li>The link for sorting by "Release Date" should have the HTML element id
+<code>release_date_header</code>.
+</li>
+    <li>The table containing the list of movies should have the HTML element id <code>movies</code>.
+(This has already been set for you by existing code.)
+</li>
+  </ul>
+  <b>
+    <i>Hints and advice</i>
+  </b>
+  <ul>
+    <li>
+    The current RottenPotatoes views use the Rails-provided "resourceful routes" helper
+    <code>movies_path</code> to generate the correct URI for the movies index page. You may find
+    it helpful to know that if you pass this helper method a hash of additional parameters,
+    those parameters will be parsed by Rails and become available in the <code>params[]</code> hash.
+  </li>
+    <li>
+    Databases are pretty good at returning collections of rows in sorted order according
+to one or more attributes. Before you rush to sort the collection returned from the
+database, look at the documentation for the ActiveRecord <code>find</code> and <code>all</code> methods and
+see if you can get the database to do the work for you instead.
+  </li>
+    <li>
+Don't put code in your views! The view shouldn't have to sort the collection itself; its
+job is just to show stuff. The controller should spoon-feed the view exactly what is to be
+displayed.
+  </li>
+  </ul>
+  <p>
+    <b>
+      <i>Submission Directions</i>
+    </b>
+  </p>
+  <p>
+You will submit a text file containing a single line with the URL of your heroku deployment. The url will look like this:
+<code>http://your-app-name.herokuapp.com</code><br/></p>
+  <endouttext/>
+  <coderesponse queuename="BerkeleyX-cs169x-p2">
+    <filesubmission points="100"/>
+    <codeparam>
+      <grader_payload>assign-2-part-1</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

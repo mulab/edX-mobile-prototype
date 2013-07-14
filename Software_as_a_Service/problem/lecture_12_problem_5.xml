@@ -1,0 +1,29 @@
+<problem display_name="Lecture 12 Problem 5: Diagnosing Problems">
+  <startouttext/>
+  <p>Your users are sporadically complaining that your site is slow, yet New Relic reports low traffic levels and low CPU utilization. What is the likely cause?</p>
+  <endouttext/>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">Not enough Heroku "dynos", so requests occasionally get "backed up"</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">Some queries are unusually slow because you're sharing DB with other apps</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">Some views take unusually long to render in certain browsers (eg. due to JavaScript)</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;">It could be any of these/Not enough information</span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

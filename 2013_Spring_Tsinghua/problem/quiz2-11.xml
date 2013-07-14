@@ -1,0 +1,54 @@
+<problem attempts="1" display_name="quiz 2-11">
+  <text>
+    <p>Sally wants her website to have a special layout on the first Tuesday of every month. She has the following controller and test code:
+            <pre>
+  # HomeController
+  def index
+    if Time.now.tuesday?
+      render 'special_index'
+    else
+      render 'index'
+    end
+  end
+
+  # HomeControllerSpec
+  it "should render special template on Tuesdays" do
+    get 'index'
+    if Time.now.tuesday?
+      response.should render_template('special_index')
+    else
+      response.should render_template('index')
+    end
+  end</pre>
+            What FIRST principle is not being followed?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>Fast</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Independent</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>Repeatable</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Self-checking</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="5">
+          <text>
+            <span>Timely</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

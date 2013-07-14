@@ -1,0 +1,27 @@
+<problem display_name="Validations and Filters" rerandomize="never">
+  <p>Which Ruby language features support the DRYness enabled by validations and filters: (a) higher-order functions, (b) closures, (c) metaprogramming</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;"> Only (a)</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;"> Only (a) and (b)</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;"> Only (a) and (c)</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;"> (a), (b) and (c) </span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

@@ -1,0 +1,27 @@
+<problem display_name="Authentication" rerandomize="never">
+  <p>Which is <b>true</b> about third-party authentication between a requester and a provider?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;"> Once completed the requester can do anything <i>you</i> can do on the provider</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;"> If your credentials on the requester are compromised, your credentials on the provider are also compromised</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;"> If the provider revokes access, the requester no longer has any of your info</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;"> Access can be time-limited to expire on a pre-set date</span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

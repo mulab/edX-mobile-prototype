@@ -1,0 +1,36 @@
+<problem max_attempts="1">
+  <text>
+    <p>
+      <ul>Which are TRUE regarding the use of points, velocity and Pivotal Tracker to measure progress in BDD and Agile?
+	    <li>(i)   Velocity is useful for gauging the progress of one team across iterations.</li>
+	     <li>(ii)  Velocity is useful for comparing the progress of two teams across iterations.</li>
+	     <li>(iii) An experienced team can use velocity to predict when certain features will be ready to ship.</li>
+	     <li>(iv)  When a story is completed, the developer who checked in the code and test(s) for that story is responsible for marking the story as Accepted.</li>
+    </ul>
+    </p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>(i) and (iii) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>(ii) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>(i), (ii), and (iii) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>(i), (ii), (iii), and (iv)</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

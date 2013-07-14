@@ -1,0 +1,43 @@
+<problem max_attempts="1">
+  <text>
+    <p>Which statement is TRUE comparing the following two versions of the same code:
+	<pre>
+	# version 1:               # version 2:
+	def foo(x,y)              def foo(x,y)
+	  if x                       if x
+	    if y                       check_y_z(y)
+	      z()                    else 
+	    end                        check_y_w(y)
+	  else                       end
+	    if y                   end     
+	      w()
+	    end                    def check_y_z(val) ; z() if val ; end
+	  end                      def check_y_w(val) ; w() if val ; end
+	end              
+	</pre></p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>Version 1 has higher per-method cyclomatic complexity</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Version 1 exposes more testing seams</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>Version 2 has a higher ABC score</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Version 1 cannot be tested to 100% C2 coverage</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

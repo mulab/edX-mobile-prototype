@@ -1,0 +1,20 @@
+<problem display_name="L8P2: SMART Features" rerandomize="never" showanswer="attempted">
+  <p>Which feature below is <i>least</i> SMART?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text> User can search for a movie by title</text>
+      </choice>
+      <choice correct="true">
+        <text> Rotten Potatoes should have good response time</text>
+      </choice>
+      <choice correct="false">
+        <text> When adding a movie, 99% of Add Movie pages should appear within 3 seconds
+</text>
+      </choice>
+      <choice correct="false">
+        <text> As a customer, I want to see the top 10 movies sold, listed by price, so that I can buy the cheapest ones first</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

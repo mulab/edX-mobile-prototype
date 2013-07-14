@@ -1,0 +1,29 @@
+<problem display_name="Lecture 12 Problem 1: Performance Metrics">
+  <startouttext/>
+  <p>Which is probably <i>not</i> a metric of high interest to you, the app operator?</p>
+  <endouttext/>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">Slowest queries</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #063;">Maximum CPU utilization</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">99 percentile response time</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;">Rendering time of 3 slowest views</span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

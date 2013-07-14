@@ -1,0 +1,27 @@
+<problem display_name="SOFA and Testing" rerandomize="never">
+  <p>Which SOFA guideline is most important for unit-level testing?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;"> Short</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;"> Do one thing </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #C00;"> Have few arguments </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;"> Stick to one level of abstraction </span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

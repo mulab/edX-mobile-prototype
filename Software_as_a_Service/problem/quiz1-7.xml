@@ -1,0 +1,30 @@
+<problem max_attempts="1" display_name="Quiz 1-7">
+  <text>
+    <p>Which of the following are true about partials?
+      <ul><li>(i)   Partials rely heavily on configuration over convention</li><li>(ii)  Partials help DRY out different views which use similar content</li><li>(iii) A partial can access all of the same variables as the view that includes it</li><li>(iv)  Partial files must begin with an underscore</li></ul></p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>(i) and (ii) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="2">
+          <text>
+            <span>(ii) and (iv) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>(i), (ii), and (iv)</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>(iii) and (iv) only</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

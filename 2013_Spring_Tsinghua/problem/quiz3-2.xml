@@ -1,0 +1,19 @@
+<problem attempts="1" display_name="quiz 3-2">
+  <text>
+    <p>High coverage can always be achieved by writing a unit test for every method.</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>True</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="2">
+          <text>
+            <span>False</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

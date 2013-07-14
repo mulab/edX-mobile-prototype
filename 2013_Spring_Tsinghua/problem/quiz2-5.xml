@@ -1,0 +1,34 @@
+<problem attempts="1" display_name="quiz 2-5">
+  <text>
+    <p>A user submits a new movie form. How would the associated controller access the title of the movie?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>session['title']</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>session.title</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>params['title']</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>params.title</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="5">
+          <text>
+            <span>All of the above</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

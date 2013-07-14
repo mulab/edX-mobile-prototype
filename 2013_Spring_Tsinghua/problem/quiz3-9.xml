@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 3-9">
+  <text>
+    <p>What is the main difference between BDD and TDD?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>BDD focuses on validation while TDD focuses on verification</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>BDD focuses on verification while TDD focuses on validation</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>BDD is better than TDD at testing methods independently</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>BDD generally uses mocks and stubs more than TDD</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

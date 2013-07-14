@@ -1,0 +1,27 @@
+<problem display_name="Goals of Method-Level Refactoring" rerandomize="never">
+  <p>Which is NOT a goal of method-level refactoring?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;"> Reduce code complexity </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;"> Eliminate code smells </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #C00;"> Eliminate bugs </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;"> Improve testability </span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

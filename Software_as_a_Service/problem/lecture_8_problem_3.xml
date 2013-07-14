@@ -1,0 +1,29 @@
+<problem display_name="Demeter Violations" rerandomize="never">
+  <startouttext/>
+  <p>Suppose <code>Order</code> belongs to <code>Customer</code>, and view has <code>@order.customer.name</code> is this a Demeter violation?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" randomize="yes">
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">
+        <text>
+          <span style="color: #F90;">Yes, but probably reasonable to just expose object graph in the view in this case</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">Yes, replace with <code>Order#customer_name</code> which delegates to <code>Customer#name</code></span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">You can make a case for either of the above</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;">No, by using <code>belongs_to</code> we're already exposing info about the <code>Customer</code> anyway</span>
+        </text>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

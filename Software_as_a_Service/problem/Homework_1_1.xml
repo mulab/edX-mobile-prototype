@@ -1,0 +1,17 @@
+<problem display_name="Homework 1 part 1 Submission">
+  <startouttext/>
+  <h3>Submission Logistics</h3>
+  <p>
+You will submit a file containing the following information on one line:<pre>
+heroku-uri admin-name admin-password</pre>
+
+for example:<pre>myname.herokuapp.com admin abc123</pre>
+</p>
+  <endouttext/>
+  <coderesponse queuename="BerkeleyX-cs169x">
+    <filesubmission points="100"/>
+    <codeparam>
+      <grader_payload>assign-1-part-1</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

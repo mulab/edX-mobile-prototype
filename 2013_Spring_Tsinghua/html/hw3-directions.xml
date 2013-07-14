@@ -1,0 +1,27 @@
+<html>
+  <h2>Homework 3: Behavior-Driven Design</h2>
+  <p>In this homework you will create user stories to describe a feature of a SaaS app, use the
+Cucumber tool to turn those stories into executable acceptance tests, and run the tests against
+your SaaS app.</p>
+  <p>Specifically, you will write Cucumber scenarios that test the happy paths of parts 1-3 of HW 2.
+The GitHub repo <pre>saasbook/hw3_rottenpotatoes</pre> contains a "canonical" solution to HW 2 against which to
+write your scenarios. It also contains the necessary scaffolding for the first couple of scenarios.
+We suggest you first fork that repo on GitHub, then clone from your own fork:<pre>
+git clone git@github.com:YourGitHubAccount/hw3_rottenpotatoes.git</pre>
+</p>
+  <p>
+We recommend that you do a
+<pre>git commit</pre>
+as you get each part working. As an optional additional help, git allows you to associate tags
+-- symbolic names -- with particular commits. For example, immediately after doing a commit,
+you could say <pre>git tag hw3-part1b</pre>
+ and thereafter you could use
+<pre>git diff hw3-part1b</pre>
+to see differences since that commit, rather than remembering its commit ID. Note that after
+creating a tag in your local repo, you need to say
+<pre>git push origin --tags</pre>
+to push the tags
+to a remote. (Tags are ignored by deployment remotes such as Heroku, so there's no point in
+pushing tags there.)
+</p>
+</html>

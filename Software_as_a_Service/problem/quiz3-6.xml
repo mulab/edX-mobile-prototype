@@ -1,0 +1,29 @@
+<problem max_attempts="1">
+  <text>
+    <p>The Rails ActiveRecord caching machinery nicely separates the logic for cache expiration from the rest of the app by adding ActiveRecord hooks to expire stale data. This is an example of effective use of the ---- design pattern.</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>Observer</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Strategy</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>Factory</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Singleton</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

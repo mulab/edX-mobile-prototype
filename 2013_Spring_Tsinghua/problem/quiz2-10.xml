@@ -1,0 +1,24 @@
+<problem attempts="1" display_name="quiz 2-10">
+  <text>
+    <p>If a controller action sets an instance variable, the instance variable's value is accessible to</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>views rendered for this request only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>views rendered for this request and the next request</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>views rendered for this request and all subsequent requests</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

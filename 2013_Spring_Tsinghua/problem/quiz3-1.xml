@@ -1,0 +1,39 @@
+<problem attempts="1" display_name="quiz 3-1">
+  <text>
+    <p>
+Sally wants to create a dating website and decides to write an algorithm that takes a list of male and female users' 
+preferences and returns the best matching of males with females. To test her algorithm, she manually calculates the best match. 
+She then runs the algorithm and checks to see if the observed output matches 
+with her manual calculation. What FIRST principle is clearly not being followed?
+</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>Fast</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Independent</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>Repeatable</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="4">
+          <text>
+            <span>Self-checking</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="5">
+          <text>
+            <span>Timely</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

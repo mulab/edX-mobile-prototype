@@ -1,0 +1,29 @@
+<problem max_attempts="1" display_name="Quiz 1-5">
+  <text>
+    <p>Which is true about third-party authentication between a requester and a provider?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>Once successfully completed, the requester can do anything you can do on the provider</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>If your credentials on the requester are compromised, your credentials on the provider are also compromised</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>If the provider revokes access, the requester no longer has any of your info</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="4">
+          <text>
+            <span>Access can be time-limited to expire on a pre-set date</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

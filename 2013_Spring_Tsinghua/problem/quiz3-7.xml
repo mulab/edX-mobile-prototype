@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 3-7">
+  <text>
+    <p>Which of the following lists the kinds of tests in order of increasing code exercise complexity?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>Integration tests, functional or module tests, unit tests</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Unit tests, integration tests, functional or module tests</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>Unit tests, functional or module tests, integration tests</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Functional or module tests, unit tests, integration tests</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

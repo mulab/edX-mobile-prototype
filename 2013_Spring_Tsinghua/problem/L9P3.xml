@@ -1,0 +1,19 @@
+<problem display_name="L9P3: BDD and User Interface Design" rerandomize="never" showanswer="attempted">
+  <p>Which statement is <i>false</i> about Lo-FI UI and BDD?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text> The purpose of the Lo-Fi UI approach is to debug the UI before you program it</text>
+      </choice>
+      <choice correct="false">
+        <text> A BDD downside is requiring continuous contact with customers, which may not be possible</text>
+      </choice>
+      <choice correct="false">
+        <text> A BDD downside is that it may lead to a poor software architecture, since focus is on behavior</text>
+      </choice>
+      <choice correct="true">
+        <text> None are false; all three above are true</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

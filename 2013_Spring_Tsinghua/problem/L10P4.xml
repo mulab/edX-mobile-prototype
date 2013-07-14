@@ -1,0 +1,25 @@
+<problem display_name="L10P4: RSpec Expectations" rerandomize="never" showanswer="attempted">
+  <p> Which of these, if any, is <i>not</i> a valid use of <code>should</code> or <code>should_not</code>?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <code>result.should_not be_empty</code>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <code>5.should be &lt;=&gt; result</code>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <code>result.should_not match /^D'oh!$/ </code>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>All of the above are valid uses</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

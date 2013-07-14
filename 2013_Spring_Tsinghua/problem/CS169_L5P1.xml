@@ -1,0 +1,14 @@
+<problem display_name="L6P1: Rails Migrations" rerandomize="never" showanswer="never"><startouttext/><p>Based on what you've seen on Rails, what kind of object is <i>likely</i> being yielded in the migration code?</p><pre>def up
+    create_table 'movies' do |t|
+        t.datetime 'release_date' ...
+    end
+end</pre><endouttext/>
+ <choiceresponse>
+    <radiogroup>
+      <choice correct="false"><text>An object representing a database.</text></choice>
+      <choice correct="false"><text>An object representing an instance of a model.</text></choice>
+      <choice correct="true"><text>An object representing a table.</text></choice>
+      <choice correct="false"><text>Come on, it could be anything.</text></choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

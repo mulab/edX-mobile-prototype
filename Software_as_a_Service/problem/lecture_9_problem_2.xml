@@ -1,0 +1,29 @@
+<problem display_name="Lecture 9 Problem 2: JavaScript Functions">
+  <startouttext/>
+  <p>Which is NOT true about functions in JavaScript?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" randomize="yes">
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">They can be anonyomus</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">They always return a value, even without an explicit return() statement</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">They can be passed a function as an argument</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;">They can execute concurrently with other functions</span>
+        </text>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

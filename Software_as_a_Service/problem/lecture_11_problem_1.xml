@@ -1,0 +1,31 @@
+<problem display_name="Lecture 11 Problem 1: App Availability">
+  <startouttext/>
+  <p>Let 
+			<ul><li>R =  RottenPotatoes app's availability</li><li>H = Heroku's vailability</li><li>C = Comcast Internet availability</li><li>P = Armando's perception of RP availability</li></ul>
+		Which statement(s) are TRUE?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" randomize="yes">
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">P ~ max (C, H, R)</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #063;">P ≤ min (C, H, R)</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">P ≤ C ≤ H ≤ R</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;">All of the expressions are true</span>
+        </text>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

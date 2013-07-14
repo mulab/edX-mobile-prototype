@@ -1,0 +1,29 @@
+<html>
+  <h2>Happy paths for filtering movies</h2>
+  <p>Complete the scenario restrict to movies with 'PG' or 'R' ratings in
+<code>filter_movie_list.feature</code>. You can use existing step definitions in <code>web_steps.rb</code>
+to check and uncheck the appropriate boxes, submit the form, and check whether the correct
+movies appear (you may ignore the case where the movie has no ratings).
+</p>
+  <p> Since it's tedious to repeat steps such as 
+<pre>When I check the 'PG' checkbox, And I check
+the 'R' checkbox, etc.</pre>
+ create a step definition to match a step such as:
+<pre>Given I check the following ratings: G, PG, R</pre>
+This single step definition should only check the specified boxes, and leave the other boxes as
+they were. <i>Hint</i>: This step definition can reuse existing steps in <code>web_steps.rb</code>, as shown in
+the example in Section 4.7 in ELLS.
+</p>
+  <p> For the scenario <code>all ratings selected</code>, it would be tedious to use "And I should see" to name
+every single movie. That would detract from the goal of BDD to convey the behavioral intent of
+the user story. To fix this, create step definitions in <code>movie_steps.rb</code> that will match steps of the form
+<pre>Then I should see all of the movies</pre>
+<i>Hint</i>: Consider counting the number of rows in the table to implement these steps. If you have
+computed rows as the number of table rows, you can use the assertion
+<pre><code>rows.should == value</code></pre>
+to fail the test in case the values don't match.
+</p>
+  <p> Use your new step definitions to complete the scenario <code>all ratings selected</code>.
+<i>Success</i> is when all scenarios in <code>filter_movie_list.feature</code> pass with all steps green.
+</p>
+</html>

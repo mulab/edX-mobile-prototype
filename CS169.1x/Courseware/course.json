@@ -1,0 +1,14 @@
+{
+	"ID": "CS169.1x",
+	"Name": "Software as a Service",
+	"School": "BerkeleyX",
+	"Sections": [
+		{"Name": "Overview"},
+		{"Name": "Week 1"},
+		{"Name": "Week 2"},
+		{"Name": "Week 3"},
+		{"Name": "Week 4"},
+		{"Name": "Week 5"},
+		{"Name": "Week 6"}
+	]
+}
