@@ -39,6 +39,10 @@ function clearDoneAll()
 {
     clearDone(totalNum[2]-1);
 }
+function readVertical()
+{
+    ///////////// <- Expand Verticals and Record Progress
+}
 $(document).ready(function(){
 	$('#subsections .colorTag').each(function(index, element){
         $(element).css('background-color',randomColor());
@@ -50,6 +54,9 @@ $(document).ready(function(){
     $('#sections ul li').click(function(e){
         setFocus($(this).index(),0);
         currentWeek = $(this).index();
+    });
+    $('#units ul li').click(function(){
+        readVertical($(this).index());
     });
     setFocus(1,1);
     markDone(3);
