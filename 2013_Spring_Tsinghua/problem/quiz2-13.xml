@@ -1,4 +1,0 @@
-<problem attempts="1" display_name="quiz 2-13">
-    Why do software projects fail? Select all that apply.
-    <choiceresponse><checkboxgroup><choice correct="true"><text> They don't do what customers want</text></choice><choice correct="true"><text> They are late</text></choice><choice correct="true"><text> They are over budget</text></choice><choice correct="true"><text> They are hard to maintain and evolve</text></choice></checkboxgroup></choiceresponse>
-</problem>
