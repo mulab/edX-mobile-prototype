@@ -1,0 +1,19 @@
+<problem display_name="L10P5: Expectations, Mocks, and Seams" rerandomize="never" showanswer="attempted">
+  <p><code>should_receive</code> combines _____ and _____, whereas stub is only  _____.</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text> a mock and an expectation; a mock</text>
+      </choice>
+      <choice correct="false">
+        <text> a mock and an expectation; an expectation </text>
+      </choice>
+      <choice correct="false">
+        <text> a seam and an expectation; an expectation</text>
+      </choice>
+      <choice correct="true">
+        <text> a seam and an expectation; a seam</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

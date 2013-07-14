@@ -1,0 +1,30 @@
+<problem attempts="1" display_name="quiz 3-5">
+  <text>
+    <p>Which of the following guarantees that you have <b>exhaustively</b>
+          unit-tested a piece of code? </p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>100% C0 (statement) coverage</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>100% C1 (branch) coverage</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>100% C2 (path) coverage</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="4">
+          <text>
+            <span>None of the above</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

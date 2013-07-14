@@ -1,0 +1,96 @@
+<problem display_name="RottenPotatoes Enhancement #2: Filter the List of Movies">
+  <startouttext/>
+  <p>
+In this portion of the assignment, you will creating functionality within RottenPotatoes that allows the user to filter movies by MPAA rating.
+The filter will be controlled by checkboxes at the top of the "All Movies" listing: 
+</p>
+  <center>
+    <img src="/c4x/BerkeleyX/CS169.1x/asset/images_HW2_Images_checkboxHW2.png"/>
+  </center>
+  <p>When the "Refresh" button is pressed, the list of movies is redisplayed showing only those
+movies whose ratings were checked.
+</p>
+  <p>
+This will require a couple of pieces of code. We have provided the code that generates the
+checkboxes form, which you can include in the <code>index.html.haml</code> template, here on <a href="http://pastebin.com/vpPqkWMb">Pastebin</a>.
+<i>However</i>, you have to do a bit of work to use it: our code expects the variable <code>@all_ratings</code> to
+be an enumerable collection of all possible values of a movie rating, such as <code>['G','PG','PG-13','R']</code>.
+The controller method needs to set up this variable. And since the possible
+values of movie ratings are really the responsibility of the Movie model, it's best if the controller
+sets this variable by consulting the Model. Create a class method of <code>Movie</code> that returns an
+appropriate value for this collection.
+</p>
+  <p>
+You will also need code that figures out (i) how to figure out which boxes the user checked and
+(ii) how to restrict the database query based on that result.
+</p>
+  <p>
+Regarding (i), try viewing the source of the movie listings with the checkbox form, and you'll see
+that the checkboxes have field names like <code>ratings[G]</code>, <code>ratings[PG]</code>, etc. This trick will
+cause Rails to aggregate the values into a single hash called <code>ratings</code>, whose keys will be the
+names of the <i>checked boxes only</i> and whose values will be the value attribute of the checkbox
+which is "1" by default, since we didn't specify another value when calling the <code>check_box_tag</code>
+helper. That is, if the user checks the 'G' and 'R' boxes, <code>params</code> will include as one if its
+values <code>:ratings=&gt;{"G"=&gt;"1", "R"=&gt;"1"}</code>. Check out the <code>Hash</code> <a href="http://www.ruby-doc.org/core-1.9.3/Hash.html">documentation</a> for an
+easy way to grab just the keys of a hash, since we don't care about the values in this case.
+</p>
+  <p>
+Regarding (ii), you'll probably end up replacing <code>Movie.all</code> with <code>Movie.find</code>, which has
+various options to help you restrict the database query.
+</p>
+  <p>
+    <b>
+      <i>Specific Requirements</i>
+    </b>
+  </p>
+  <ul>
+    <li>Make sure that you don't break the sorted-column functionality you added in part
+1B! That is, sorting by column headers should still work, and if the user then clicks
+the "Movie Title" column header to sort by movie title, the displayed results should both
+be sorted and be limited by the Ratings checkboxes.   
+    </li>
+    <li>If the user checks (say) 'G' and 'PG' and then redisplays the list, the checkboxes that
+were used to filter the output should appear checked when the list is redisplayed. This
+will require you to modify the checkbox form slightly from the version we provided above.
+    </li>
+    <li>
+The first time the user visits the page, all checkboxes should be checked by default
+(so the user will see all movies). For now, ignore the case when the user unchecks all
+checkboxes—you will get to this in the next part.
+    </li>
+  </ul>
+  <b>
+    <i>Important for grading purposes</i>
+  </b>
+  <ul>
+    <li>Your form tag should have the id <code>ratings_form</code></li>
+    <li>The form submit button for filtering by ratings should have an HTML element id of
+<code>ratings_submit</code>.
+      </li>
+    <li>Each checkbox should have an HTML element id of <code>ratings_#{rating}</code>,
+where the interpolated <code>rating</code> should be the rating itself, such as “PG-13”, “G”.
+For instance the id for the checkbox for PG-13 should be <code>ratings_PG-13</code>.
+      </li>
+  </ul>
+  <b>
+    <i>Hints and advice</i>
+  </b>
+  <ul>
+    <li>
+Don't put code in your views! Set up some kind of instance variable in the controller that
+remembers which ratings were actually used to do the filtering, and make that variable
+available to the view so that the appropriate boxes can be pre-checked when the index
+view is reloaded.
+    </li>
+  </ul>
+  <p>
+You will submit a text file, containing a single line with the url of your heroku deployment. The url will look like this:
+<code>http://your-app-name.herokuapp.com</code><br/></p>
+  <endouttext/>
+  <coderesponse queuename="BerkeleyX-cs169x-p2">
+    <filesubmission points="100"/>
+    <codeparam>
+      <grader_payload>assign-2-part-2</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

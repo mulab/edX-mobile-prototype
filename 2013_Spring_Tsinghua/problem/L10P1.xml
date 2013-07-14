@@ -1,0 +1,21 @@
+<problem display_name="L10P1: BDD and TDD" rerandomize="never" showanswer="attempted">
+  <p>Which are true about BDD and TDD?
+  <ol><li> Requirements drive implementation </li><li> They’re used only within Agile development </li><li> They embrace and deal with change </li></ol>
+</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text> Only (1)</text>
+      </choice>
+      <choice correct="false">
+        <text> Only (1) and (2)</text>
+      </choice>
+      <choice correct="true">
+        <text> Only (1) and (3)</text>
+      </choice>
+      <choice correct="false">
+        <text> (1), (2) and (3)</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

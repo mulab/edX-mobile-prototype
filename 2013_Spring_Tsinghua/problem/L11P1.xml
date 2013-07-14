@@ -1,0 +1,19 @@
+<problem display_name="L11P1: Fixtures" rerandomize="never" showanswer="attempted">
+  <p>Which of the following kinds of data, if any, should <i>not</i> be set up as fixtures?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="true">
+        <text> Movies and their ratings</text>
+      </choice>
+      <choice correct="false">
+        <text> The TMDb API key</text>
+      </choice>
+      <choice correct="false">
+        <text> The application's time zone settings</text>
+      </choice>
+      <choice correct="false">
+        <text> Fixtures would be fine for all of these</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

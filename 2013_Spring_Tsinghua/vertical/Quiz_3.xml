@@ -1,0 +1,13 @@
+<vertical attempts="1" display_name="Quiz 3" due="February 17" format="Quiz" graded="true" rerandomize="never" showanswer="never" start="2013-02-08T12:00">
+  <problem url_name="quiz3-1"/>
+  <problem url_name="quiz3-2"/>
+  <problem url_name="quiz3-3"/>
+  <problem url_name="quiz3-4"/>
+  <problem url_name="quiz3-5"/>
+  <problem url_name="quiz3-6"/>
+  <problem url_name="quiz3-7"/>
+  <problem url_name="quiz3-8"/>
+  <problem url_name="quiz3-9"/>
+  <problem url_name="quiz3-10"/>
+  <problem url_name="quiz3-11"/>
+</vertical>

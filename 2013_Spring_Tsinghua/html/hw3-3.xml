@@ -1,0 +1,26 @@
+<html>
+  <h2>Happy paths for sorting movies by title and by release date</h2>
+  <p>Since the scenarios in <code>sort_movie_list.feature</code> involve sorting, you will need the
+ability to have steps that test whether one movie appears before another in the output listing.
+Create a step definition that matches a step such as "Then I should see 'Aladdin' before 'Amelie'."
+</p>
+  <p>
+    <b>
+      <i>Hints</i>
+    </b>
+  </p>
+  <ul>
+    <li><code>page</code> is the Capybara method that returns whatever came back from the app server.
+<code>page.body</code> is the page's HTML body as one giant string.
+  </li>
+    <li>A regular expression could capture whether one string appears before another in a
+larger string, though that's not the only possible strategy.
+  </li>
+  </ul>
+  <p>Use the step definition you just created to complete the scenarios: sort
+movies alphabetically and sort movies in increasing order of release date in
+<code>sort_movie_list.feature</code>.
+</p>
+  <p><i>Success</i> is all steps of all scenarios in both feature files passing green.
+</p>
+</html>

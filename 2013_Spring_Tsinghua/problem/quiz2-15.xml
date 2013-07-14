@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 2-15">
+  <text>
+    <p>Which of the following is true about implicit requirements and explicit requirements?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>You cannot write user stories for both explicit and implicit requirements</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Implicit requirements tend to be more concise, while explicit requirements tend to be more verbose</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>Implicit requirements are the logical consequence of explicit requirements, and typically correspond to integration tests</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Explicit requirements are usually defined with imperative scenarios and implicit requirements are usually defined with declarative scenarios</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

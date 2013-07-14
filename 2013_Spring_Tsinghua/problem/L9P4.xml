@@ -1,0 +1,28 @@
+<problem display_name="L9P4: CSS Selectors" rerandomize="never" showanswer="attempted">
+  <p>Which CSS selector will select only the word “bar” for styling:</p>
+  <pre>
+&lt;p class="a"&gt;foo,
+&lt;span class="a"&gt;bar&lt;span&gt; &lt;/p&gt;</pre>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <code>span.a</code>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <code>p .a</code>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <code>.a span</code>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>All of these</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

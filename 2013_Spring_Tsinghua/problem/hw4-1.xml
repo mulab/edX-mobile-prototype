@@ -1,0 +1,16 @@
+<problem display_name="Homework 4">
+  <startouttext/>
+  <p>Here are the instructions for submitting HW4. Submission will be similar to HW3. You will submit a <code>.tar.gz</code> file with various directories of your app:
+<ul><li><code>app/</code></li><li><code>config/</code></li><li><code>db/migrate</code></li><li><code>features/</code></li><li><code>spec/</code></li><li><code>Gemfile</code></li></ul>
+If you modified any other files, please include them too. If you are using the Virtual Machine, navigate to the root directory for HW4 and run
+<pre>tar czf hw4.tar.gz app/ config/ db/migrate features/ spec/ Gemfile</pre>
+This will create the file <code>hw4.tar.gz</code>, which you will submit. Please note that the auto-grader may take longer than usual. If it takes more than several minutes, try refreshing the page.
+</p>
+  <endouttext/>
+  <coderesponse queuename="BerkeleyX-cs169x-p4">
+    <filesubmission points="500"/>
+    <codeparam>
+      <grader_payload>assign-4-part-1</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

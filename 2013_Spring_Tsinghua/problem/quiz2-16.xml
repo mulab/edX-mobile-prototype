@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 2-16">
+  <text>
+    <p>When should you write specific (imperative) user stories instead of declarative user stories?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>When you want to express the details of the user interface for business value or customer need</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>When you want to write user stories for both explicit and implicit requirements</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>When you want to write simpler, less verbose, and more maintainable user stories</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Never -- you should always write declarative user stories</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

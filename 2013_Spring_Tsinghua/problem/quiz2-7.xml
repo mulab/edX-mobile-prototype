@@ -1,0 +1,19 @@
+<problem attempts="1" display_name="quiz 2-7">
+  <text>Which of the following can be used to store state ACROSS requests from the same user? Select all that apply.</text>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="true">
+        <text>Cookies</text>
+      </choice>
+      <choice correct="true">
+        <text>The <code>session[]</code> hash</text>
+      </choice>
+      <choice correct="false">
+        <text>Instance variables set by a controller method</text>
+      </choice>
+      <choice correct="false">
+        <text>Class variables set by a controller method</text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

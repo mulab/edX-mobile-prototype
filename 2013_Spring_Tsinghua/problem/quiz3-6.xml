@@ -1,0 +1,29 @@
+<problem attempts="1" display_name="quiz 3-6">
+  <text>
+    <p>Your test randomly changes the comparison operators in your conditionals. This is which kind of testing?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="true" name="1">
+          <text>
+            <span>Mutation test</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Glass-box test</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="3">
+          <text>
+            <span>Black-box test</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Fuzz test</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

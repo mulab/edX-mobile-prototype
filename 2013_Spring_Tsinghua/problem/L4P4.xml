@@ -1,0 +1,19 @@
+<problem display_name="L5P4: RESTful Routes" rerandomize="never" showanswer="never">
+  <p>Which statement is <i>not</i> true regarding Rails RESTful routes and the resources to which they refer? </p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <span>A resource may be existing content or a request to modify something.</span>
+      </choice>
+      <choice correct="false">
+        <span>Every route must eventually trigger a controller action. </span>
+      </choice>
+      <choice correct="false">
+        <span>One common set of RESTful actions is the CRUD actions on models.</span>
+      </choice>
+      <choice correct="true">
+        <span>The route always contains one or more parameters, such as <code>:id</code>, to identify the resource.</span>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

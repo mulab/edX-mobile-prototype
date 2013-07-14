@@ -1,0 +1,20 @@
+<problem display_name="L8P4: Lo-Fi User Interface Design" rerandomize="never" showanswer="attempted">
+  <p>Which is <i>false</i> about Lo-Fi UI?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text> Like 3x5 cards, sketches and storyboards are more likely to involve all stakeholders vs. code</text>
+      </choice>
+      <choice correct="false">
+        <text> The purpose of the Lo-Fi UI approach is to debug the UI before you program it</text>
+      </choice>
+      <choice correct="false">
+        <text> SaaS apps usually have a user interfaces associated with the user stories
+</text>
+      </choice>
+      <choice correct="true">
+        <text> While it takes more time than building a prototype UI in CSS and Haml, the Lo-Fi approach is more likely to lead to a UI that customers like</text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

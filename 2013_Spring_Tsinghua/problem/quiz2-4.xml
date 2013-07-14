@@ -1,0 +1,31 @@
+<problem attempts="1" display_name="quiz 2-4">
+  <text>
+   Which of the following sets of code will add a new movie entry to the database with all attributes properly set? Select all that apply.</text>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="true">
+        <text>
+          <pre>batman_begins = Movie.create(:title =&gt; 'Batman Begins', :release_date =&gt; '6/15/2005',
+:rating =&gt; 'PG-13')</pre>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <pre>dark_knight = Movie.new
+dark_knight.title = 'The Dark Knight'
+dark_knight.release_date = '7/18/2008'
+dark_knight.rating = 'PG-13'
+dark_knight.save!</pre>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <pre>dark_knight_rises = Movie.create
+dark_knight_rises.title = 'The Dark Knight Rises'
+dark_knight_rises.release_date = '7/20/2012'
+dark_knight_rises.rating = 'PG-13'</pre>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

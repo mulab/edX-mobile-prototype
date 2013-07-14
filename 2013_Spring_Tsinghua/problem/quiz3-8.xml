@@ -1,0 +1,24 @@
+<problem attempts="1" display_name="quiz 3-8">
+  <text>
+  Which of the following statements are true regarding mocks in RSpec?  Select all that apply. 
+  </text>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="true">
+        <text>
+Mocks are used to isolate tests from the database
+    </text>
+      </choice>
+      <choice correct="false">
+        <text>
+Model mocks automatically have access to all existing methods of the model
+</text>
+      </choice>
+      <choice correct="true">
+        <text>
+Mocks can be created with default attribute values
+</text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

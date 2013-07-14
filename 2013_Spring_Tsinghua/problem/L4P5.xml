@@ -1,0 +1,19 @@
+<problem display_name="L5P5: Rendering" rerandomize="never" showanswer="never">
+  <p>Why must every interaction with a SaaS app eventually cause something to be rendered?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <span>Because of convention over configuration.</span>
+      </choice>
+      <choice correct="true">
+        <span>Because HTTP is a request-reply protocol.</span>
+      </choice>
+      <choice correct="false">
+        <span>Because Model-View-Controller implies that every action renders its own View.</span>
+      </choice>
+      <choice correct="false">
+        <span>All of the above.</span>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>
