@@ -48,17 +48,17 @@
                                     var innerHtml = child["inner-html"];
                                     if (exPath) {
                                         var includePath = buildpath["build-path"] + exPath;
-                                        for (var cssIndex in exCssList) {
-                                            $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
-                                        }
-                                        for (var jsIndex in exJsList) {
-                                            $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + '" />');
-                                        }
                                         if (innerHtml) {
                                             $.get(buildpath["build-path"] + exPath + innerHtml,
                                             function(ir) {
                                                 $(selector).html(ir);
                                             });
+                                        }
+                                        for (var cssIndex in exCssList) {
+                                            $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
+                                        }
+                                        for (var jsIndex in exJsList) {
+                                            $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + '" />');
                                         }
                                     }
                                 }
@@ -84,7 +84,23 @@
         </title>
         <div data-role="page">
             <div data-role="header" data-position="fixed">
-                this is a test
+                <div class="course-pic">
+                    this is course pic
+                </div>
+                <div class="course-title">
+                    <div class="course-title-num">
+                        this is course num
+                    </div>
+                    <div class="course-title-name">
+                        this is course name
+                    </div>
+                </div>
+                <div class="course-teacher">
+                    this is course teacher
+                </div>
+                <div class="back-home">
+                    this is back
+                </div>
             </div>
             <div data-role="content">
                 <div class="sidebar">
