@@ -38,17 +38,17 @@
     							var innerHtml = child["inner-html"];
     							if (exPath) {
     								var includePath = buildpath["build-path"] + exPath;
+                                    if (innerHtml) {
+                                        $.get(buildpath["build-path"] + exPath + innerHtml, function(ir) {
+                                            $(selector).html(ir);
+                                        });
+                                    }
     								for(var cssIndex in exCssList){
                                         $('head').append('<link rel="stylesheet" href="'+includePath+exCssList[cssIndex] +'" />');
                                     }
                                     for(var jsIndex in exJsList){
                                         $('head').append("<script type='text/javascript' src='"+includePath+exJsList[jsIndex]+'" />');
                                     }
-    								if (innerHtml) {
-    									$.get(buildpath["build-path"] + exPath + innerHtml, function(ir) {
-    										$(selector).html(ir);
-    									});
-    								}
     							}
     						}
     					});

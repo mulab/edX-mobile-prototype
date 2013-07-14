@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+	$(document).ready(function() {
+		var xmlDom = loadXmlFile("test.xml");
+		var chapterSet = xmlDom.getElementsByTagName("chapter");
+		for (var chapterIndex = 0; chapterIndex < chapterSet.length; chapterIndex++) {
+			var chapter = chapterSet[chapterIndex];
+			$('ul').append("<li>" + chapter.attributes["url_name"].nodeValue + "</li>");
+		}
+	});
+	</script>
+</head>
+<body>
+	result:
+	<ul></ul>
+</body>
+</html>
