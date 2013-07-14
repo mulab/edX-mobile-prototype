@@ -20,6 +20,7 @@
         </script>
         <script type="text/javascript" src="js/main.js">
         </script>
+        <script type="text/javascript" src="src/coursePage/ex/header.js"></script>
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript">
             var forBuild = false;
@@ -58,7 +59,7 @@
                                             $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
                                         }
                                         for (var jsIndex in exJsList) {
-                                            $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + '" />');
+                                            $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + "'>" + "</" + "script>");
                                         }
                                     }
                                 }
@@ -83,29 +84,24 @@
             Document
         </title>
         <div data-role="page">
-            <div data-role="header" data-position="fixed">
+            <div data-role="header" >
                 <div class="course-pic">
-                    this is course pic
                 </div>
                 <div class="course-title">
                     <div class="course-title-num">
-                        this is course num
                     </div>
                     <div class="course-title-name">
-                        this is course name
                     </div>
                 </div>
                 <div class="course-teacher">
-                    this is course teacher
                 </div>
                 <div class="back-home">
-                    this is back
                 </div>
             </div>
             <div data-role="content">
                 <div class="sidebar">
                     <!--div class="ui-grid-a"-->
-                    <div class="sidetag" data-role="header">
+                    <div class="sidetag" >
                         <span>
                             Week 1
                         </span>

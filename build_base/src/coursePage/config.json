@@ -21,7 +21,7 @@
             "selector": "div:jqmData(role='header')",
             "ex-path": "ex/",
             "ex-css": [],
-            "ex-js": ["header.js"],
+            "ex-js": [],
             "inner-html": "header.html"
         },
         {
