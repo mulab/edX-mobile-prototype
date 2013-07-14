@@ -1,6 +1,0 @@
-<html>
-  <h2>Homework 4: BDD and TDD Cycle</h2>
-  <p>In this homework you will use the Cucumber and RSpec tools to add new functionality to a SaaS app. This functionality will be designed following the principles of Behavior-Driven Design (BDD) and developed following Test-Driven Development (TDD).</p>
-  <p>You can either start from your HW 3 solution or from the repo <a href="https://github.com/saasbook/hw4_rottenpotatoes">saasbook /hw4_rottenpotatoes</a> on GitHub.  If you choose to do the latter, you should <a href="https://help.github.com/articles/fork-a-repo">fork</a> the repo and then clone from your own fork.  Once you have created a fork, it is a new repo, and subsequent changes will not affect anyone else. You can now make edits and push them, and they will be saved to only your fork.
-</p>
-</html>
