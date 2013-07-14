@@ -1,9 +1,10 @@
-/bin
-/apps
-/nbproject
-/test
-/config
-/data
+bin/
+apps/
+nbproject/
+test/
+config/
+
+data/
 
 *.DS_Store
 *.swp

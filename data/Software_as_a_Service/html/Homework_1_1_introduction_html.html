@@ -1,9 +1,0 @@
-<h1>Homework 1: Refactoring and Legacy Code</h1><h3>Part 1 (steps 0-2) Due Sunday, November 25th</h3><h3>Part 2 (step 3) Due Sunday, December 2nd</h3><br/><br/><b>Overview: Extending and Fixing Typo</b><br/><p>Typo is a blogging engine written in Rails to allow people to set up a blog easily.  Typo consists
-    of about 30,000 lines of code (30 KLOC) and comes with a ton of features, including
-    authentication to post to the blog, attaching files to articles, adding special markup, creating 
-    custom themes, building user profiles, and allowing guests and/or users to comment on posts.  It 
-    also supports more advanced features like trackbacks (allowing other blogs to "track back" to
-    yours and mention you in their blog article).</p><p>From your perspective, Typo is legacy code since you didn't write it yourself :-)  In this
-    assignment you'll go through the steps of adapting the BDD+TDD cycle to enhance and fix a 
-    bug in a piece of legacy code.</p><p>Preview of structure of assignment:</p><b>Part 1</b><ul><li>Get the legacy software running and play around with Typo to familiarize yourself with it.</li><li>Create cucumber stories based on mockup that we will provide for a new Typo feature:
-article merging. These stories will serve as high-level integration/acceptance tests.</li><li>Use stories to drive the process of identifying necessary modifications to Typo for the new feature.</li><li>Write the new feature code so that it passes the cucumber stories you have created as well as all existing rspec tests.</li></ul><b>Part 2</b><ul><li>Examine the bug in typo.</li><li>Write cucumber stories to test the behavior of the bug.</li><li>Write a bugfix that passes the cucumber stories you created to test the bug.</li></ul>
