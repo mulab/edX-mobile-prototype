@@ -1,0 +1,14 @@
+bin/
+apps/
+nbproject/
+test/
+config/
+
+data/
+
+*.DS_Store
+*.swp
+<<<<<<< HEAD
+.idea/*
+=======
+>>>>>>> 7b392e18e1e72bb2c4b888bdf413944b500dcb79
