@@ -1,10 +1,10 @@
-var initHeader = function(){
+var initHeader = function(bodyInner){
 	//field define
-	var course_pic = $('.course-pic');
-	var course_title_num = $('.course-title-num');
-	var course_title_name = $('.course-title-name');
-	var course_teacher = $('.course-teacher');
-	var back_home = $('.back-home');
+	var course_pic = bodyInner.find('.course-pic');
+	var course_title_num = bodyInner.find('.course-title-num');
+	var course_title_name = bodyInner.find('.course-title-name');
+	var course_teacher = bodyInner.find('.course-teacher');
+	var back_home = bodyInner.find('.back-home');
 	var course_title_num_text;
 	var course_title_name_text;
 	var course_img_path = "static/images/course_image.jpg";

@@ -14,7 +14,7 @@
             "ex-path": "ex/",
             "ex-css": [],
             "ex-js": [],
-            "inner-html": ""
+            "inner-html": "content.html"
         },
         {
             "name": "header",
@@ -40,5 +40,6 @@
             "ex-js": [],
             "inner-html": ""
         }
-    ]
+    ],
+    "final-js":"final.js"
 }
