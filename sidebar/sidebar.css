@@ -39,6 +39,10 @@
 	background-color: white;
 }
 
+.ui-btn-active{
+    background-color: white;
+}
+
 #subsections {
 	top: 0em;
 	padding: 1em 1em 1em 1em;
