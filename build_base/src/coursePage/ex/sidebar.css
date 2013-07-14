@@ -1,0 +1,19 @@
+.sidetag {
+	padding-left: 2em;
+	position: absolute;
+	top:-1.5em;
+	left:0em;
+	height: 1.5em;
+	width:200%;
+	float:left;
+	overflow: visible;
+	display: block;
+	transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Safari and Chrome */
+	transform-origin:center center;
+	-o-transform-origin:center center;
+	-ms-transform-origin:center center;
+	-webkit-transform-origin:0% 100%;
+}

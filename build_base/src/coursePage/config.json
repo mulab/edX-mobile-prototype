@@ -12,7 +12,7 @@
             "name": "content",
             "selector": "div:jqmData(role='content')",
             "ex-path": "ex/",
-            "ex-css": ["ex.css"],
+            "ex-css": [],
             "ex-js": [],
             "inner-html": ""
         },
@@ -28,9 +28,9 @@
             "name": "sidebar",
             "selector": "div.sidebar",
             "ex-path": "ex/",
-            "ex-css": [],
+            "ex-css": ["sidebar.css"],
             "ex-js": [],
-            "inner-html": ""
+            "inner-html": "sidebar.html"
         },
         {
             "name": "main",
