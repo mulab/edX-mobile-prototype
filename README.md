@@ -13,3 +13,5 @@ Mobile Clients for edX
    * video/$(url_name).xml
    * problem/$(url_name).xml
    * discussion/$(url_name).xml
+
+请把解压出来的这两个文件夹放到data/下
