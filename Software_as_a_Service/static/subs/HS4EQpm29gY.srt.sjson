@@ -1,0 +1,53 @@
+{
+  "start": [
+    865, 
+    2560, 
+    5290, 
+    6380, 
+    7260, 
+    10430, 
+    12420, 
+    14430, 
+    15990, 
+    18930, 
+    24790, 
+    27900, 
+    28810, 
+    29630, 
+    32479
+  ], 
+  "end": [
+    2560, 
+    5290, 
+    6380, 
+    7260, 
+    10430, 
+    12420, 
+    14430, 
+    15990, 
+    18930, 
+    24790, 
+    27900, 
+    28810, 
+    29630, 
+    32479, 
+    36250
+  ], 
+  "text": [
+    "DAVID PATTERSON: SCRUM doesn't actually--", 
+    "it's not all true because you don't have to use Agile", 
+    "development with SCRUM.", 
+    "It's a good match.", 
+    "But some people do use SCRUM for other models.", 
+    "Just getting together every day and talking about what's", 
+    "your problems is useful.", 
+    "SCRUM is good for safety critical software.", 
+    "Armando and I think that, boy, if planes are going to fall out of the", 
+    "sky, you maybe need more careful standards and more careful writing.", 
+    "People argue with me that you could use SCRUM for safety critical", 
+    "software, as well.", 
+    "There's advantages.", 
+    "But it's really at its strength when you can plan ahead.", 
+    "OK, with that we will come back on Wednesday and learn more about teams."
+  ]
+}

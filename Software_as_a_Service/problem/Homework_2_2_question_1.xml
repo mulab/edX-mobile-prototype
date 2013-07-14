@@ -1,0 +1,13 @@
+<problem weight="33" display_name="Question 1">
+  <startouttext/>
+  <p>Which design pattern is used to invalidate a cached page after the underlying data has changed?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" rerandomize="never">
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Adapter</choice>
+      <choice correct="false">Decorator</choice>
+      <choice correct="false">Strategy</choice>
+      <choice correct="true" points="33">Observer</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

@@ -1,0 +1,35 @@
+<problem display_name="Associations" rerandomize="never">
+  <startouttext/>
+  <p>Which of these, if any, is NOT a correct way of saving a new association, given <span style="color: #66C; font-size:larger;"><tt>m</tt></span> is an <i>existing</i> movie:</p>
+  <endouttext/>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90; font-size:larger;">
+            <tt> Review.create!(:movie_id=&gt;m.id, :potatoes=&gt;5) </tt>
+          </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063; font-size:larger;">
+            <tt> r = m.reviews.build(:potatoes =&gt; 5); r.save! </tt>
+          </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00; font-size:larger;">
+            <tt> m.reviews &lt;&lt; Review.new(:potatoes=&gt;5); m.save! </tt>
+          </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;">All will work</span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

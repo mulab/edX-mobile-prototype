@@ -1,0 +1,28 @@
+<problem display_name="CRC Design" rerandomize="never">
+  <p> “Patrons can make donations as well as buy tickets.  For donations we need to track which fund they donate to so we can create reports showing each fund’s activity.  For tickets we need to track what show they’re for so we can run reports by show, plus other things that aren’t true of donations, such as when they expire.”
+<span style="color: #66C"><i>Which statement or statements is/are LEAST compelling for this design?</i></span></p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="true">
+        <text>
+          <span style="color: #F90;"> Donation has at least 3 collaborator classes </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #063;"> Donations and Tickets should subclass from a common ancestor </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;"> Donations and Tickets should implement a common interface such as “Purchasable” </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;"> Donations and Tickets should implement a common interface such as “Reportable” </span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

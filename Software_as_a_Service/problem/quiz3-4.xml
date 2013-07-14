@@ -1,0 +1,29 @@
+<problem max_attempts="1">
+  <text>
+    <p>Which of the following BEST describes why one would want to "minify" JavaScript?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>To make JavaScript harder to decipher for circumventers who try to inspect the JavaScript code</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>To reduce the complexity of JavaScript into an easy-to-use library for faster development</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>To compress JavaScript code for faster page load times</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>To make ones JavaScript code more cross-browser compatible</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

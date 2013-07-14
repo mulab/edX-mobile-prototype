@@ -1,0 +1,27 @@
+<problem display_name="Characterization Tests" rerandomize="never">
+  <p>Which is FALSE about integration-level characterization tests vs. module- or unit- level characterization tests?</p>
+  <choiceresponse>
+    <radiogroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;"> They are based on fewer assumptions about how the code works </span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #063;"> They are just as likely to be unexpectedly dependent on the production databse </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;"> They rely less on detailed knowledge about the code's structure </span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;"> If a customer can do the action, you can create a simple characterization test by mechanizing the action by brute force </span>
+        </text>
+      </choice>
+    </radiogroup>
+  </choiceresponse>
+</problem>

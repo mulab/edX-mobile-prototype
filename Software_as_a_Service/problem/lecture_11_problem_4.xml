@@ -1,0 +1,29 @@
+<problem display_name="Lecture 11 Problem 4: Feature Flags">
+  <startouttext/>
+  <p>Which one, if any, is a POOR place to store the value (eg. true/false) of a feature flag?</p>
+  <endouttext/>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="true">
+        <text>
+          <span style="color: #F90;">A YAML file in <code>config/</code> directory of app</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">A column in an existing database table</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">A separate database table</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;">These are all good places to store feature-flag values</span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

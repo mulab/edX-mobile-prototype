@@ -1,0 +1,29 @@
+<problem display_name="Lecture 5 Problem 2: Points, Velocity, and Pivotal Tracker">
+  <startouttext/>
+  <p>Which expression statement regarding Points, Velocity, and Tracker is TRUE?</p>
+  <endouttext/>
+  <multiplechoiceresponse direction="vertical" randomize="yes">
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">When comparing two teams, the one with the higher velocity is more productive</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #063;">When you don't know how to approach a given user story, just give it 3 points</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">With Tracker, developers pick the user stories and mark as Accepted when done</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color:#006;">Tracker helps prioritize and keep track of user stories and their status, calculates velocity, and predicts software development time</span>
+        </text>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

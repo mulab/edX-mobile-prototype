@@ -19,16 +19,19 @@
 }
 
 #sections {
+	top: 0em;
 	width: 40%;
-	padding: 1em 1em 1em 2em;
+	padding: 1em 1em 1em 1.5em;
 }
 
 #subsections {
+	top: 0em;
 	width: 40%;
 	padding: 1em 1em 1em 1em;
 }
 
 #units {
+	top: 0em;
 	width: 100%;
 	padding: 1em 1em 1em 1em;
 }

@@ -1,0 +1,31 @@
+<problem max_attempts="1">
+  <text>
+    <p>What makes the code “legacy”?
+      <ul><li>(i)   It doesn't meet customer's need anymore</li><li>(ii)  It was written long time ago</li><li>(iii) It's poorly documented</li><li>(iv)  It lacks good tests</li></ul>
+    </p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>(i) and (ii) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>(i) and (iii) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>(ii), (iii) and (iv) only</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>(i), (ii), (iii), and (iv)</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

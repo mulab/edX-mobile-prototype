@@ -1,0 +1,29 @@
+<problem max_attempts="1">
+  <text>
+    <p>Which is NOT a challenge of preparing to modify legacy code?</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>It may run in production but be difficult to fire up in a development environment</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>It may have failing or obsolete tests in its test suite</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>The customer may be unsure of what enhancements are most important</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>There may be hidden bugs that haven't yet been triggered by a customer use case and for which no test exists</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

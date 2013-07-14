@@ -1,0 +1,34 @@
+<problem max_attempts="1">
+  <text>
+    <p>The refused bequest design smell in which a subclass destructively overrides a parent behavior or forces changes to the parent class so that the behavior is not inherited generally signals a violation of which of the following SOLID principles:</p>
+    <multiplechoiceresponse direction="vertical" randomize="yes">
+      <choicegroup type="MultipleChoice">
+        <choice location="random" correct="false" name="1">
+          <text>
+            <span>Single Responsibility</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="2">
+          <text>
+            <span>Open/Closed</span>
+          </text>
+        </choice>
+        <choice location="random" correct="true" name="3">
+          <text>
+            <span>Liskov Substitution</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="4">
+          <text>
+            <span>Injection of Dependencies</span>
+          </text>
+        </choice>
+        <choice location="random" correct="false" name="5">
+          <text>
+            <span>Demeter</span>
+          </text>
+        </choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+  </text>
+</problem>

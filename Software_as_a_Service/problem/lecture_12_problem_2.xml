@@ -1,0 +1,32 @@
+<problem display_name="Lecture 12 Problem 2: Types of Caching">
+  <startouttext/>
+  <p>Under-17 visitors to RottenPotatoes shouldn't see NC-17 movies in any listing. What kinds of caching would be appropriate:<br/>
+		i) Page<br/>
+		ii) Action<br/>
+		iii) Fragment </p>
+  <endouttext/>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">(i) &amp; (iii)</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #063;">(ii) &amp; (iii)</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">(iii) only</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;">(i), (ii) and (iii)</span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

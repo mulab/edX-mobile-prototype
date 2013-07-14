@@ -1,0 +1,29 @@
+<problem display_name="Lecture 12 Problem 3: Indices">
+  <startouttext/>
+  <p>Suppose Movies has many Moviegoers through Reviews. Which column index MOST helps to speed up the query <code style="color:#66C">fans = @movie.moviegoers</code> </p>
+  <endouttext/>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="false">
+        <text>
+          <span style="color: #F90;">movies.review_id</span>
+        </text>
+      </choice>
+      <choice correct="true">
+        <text>
+          <span style="color: #063;">reviews.movide_id</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color: #C00;">reviews.moviegoer_id</span>
+        </text>
+      </choice>
+      <choice correct="false">
+        <text>
+          <span style="color:#006;">moviegoers.review_id</span>
+        </text>
+      </choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
