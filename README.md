@@ -3,7 +3,7 @@ edx-mobile
 
 Mobile Clients for edX
 
-/2013_Spring_Tsinghua下是课程导出文件，层级关系如下：
+2013_Spring_Tsinghua/ 和 Software_as_a_Service/ 目录下是课程导出文件，层级关系如下：
  1. course.xml
  2. course/$(url_name).xml
  3. chapter/$(url_name).xml
@@ -13,3 +13,5 @@ Mobile Clients for edX
    * video/$(url_name).xml
    * problem/$(url_name).xml
    * discussion/$(url_name).xml
+
+请把解压出来的这两个文件夹放到data/下
