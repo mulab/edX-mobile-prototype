@@ -1,4 +1,4 @@
-$(document).ready(function(){
+var initHeader = function(){
 	//field define
 	var course_pic = $('.course-pic');
 	var course_title_num = $('.course-title-num');
@@ -16,29 +16,29 @@ $(document).ready(function(){
 	//field define end
 
 	//method define
-	var loadTitle = function(rootpath){
-		var rootDom = loadXmlFile(rootpath+"course.xml");
+	var loadTitle = function(coursepath){
+		var rootDom = loadXmlFile(coursepath+"course.xml");
 		var courseDom = rootDom.getElementsByTagName("course")[0];
 		course_title_num_text = courseDom.attributes["course"].nodeValue;
 		var url_name = courseDom.attributes["url_name"].nodeValue;
 		courseDom = null;// free 
 		rootDom = null;
-		rootDom = loadXmlFile(rootpath+"course/"+url_name+".xml");
+		rootDom = loadXmlFile(coursepath+"course/"+url_name+".xml");
 		courseDom = rootDom.getElementsByTagName("course")[0];
 		course_title_name_text = courseDom.attributes["display_name"].nodeValue;
 	}
-	var loadCourseImage = function(rootpath){
-		course_img_path = rootpath + course_img_path;
+	var loadCourseImage = function(coursepath){
+		course_img_path = coursepath + course_img_path;
 	}
-	var loadTeacher = function(rootpath) {
-		pro_img_json_path = rootpath + pro_img_json_path;
+	var loadTeacher = function(coursepath) {
+		pro_img_json_path = coursepath + pro_img_json_path;
 		$.ajaxSetup({
 			async: false
 		});
 		$.getJSON(pro_img_json_path,function(json){
 			pro_img_list = json["url"];
 			for(var i = 0;i<pro_img_list.length;i++){
-				pro_img_list[i] = rootpath + pro_img_path + pro_img_list[i];
+				pro_img_list[i] = coursepath + pro_img_path + pro_img_list[i];
 			}
 		})
 		$.ajaxSetup({
@@ -53,15 +53,15 @@ $(document).ready(function(){
 			course_teacher.append("<img src='"+pro_img_list[i]+"'/>");
 		}
 	}
-	var getRootPath = function(){
+	var getcoursepath = function(){
 		root_path = "../data/2013_Spring_Tsinghua/";
 		debug = true;
 	}
 	//main
-	getRootPath();
+	getcoursepath();
 	if(debug)alert("debug mode");
 	loadTitle(root_path);
 	loadTeacher(root_path);
 	loadCourseImage(root_path);
 	render();
-});
+}
