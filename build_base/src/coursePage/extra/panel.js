@@ -3,6 +3,7 @@ var initPanel = function(bodyInner){
 	var weeklist = bodyInner.find("ul#weeklist");
 	var sublist = bodyInner.find("ul#sublist");
 	var verticallist = bodyInner.find("ul#verticallist");
+    var storage = window.localStorage;
 	$("div:jqmData(role='panel')").on("swiperight",function(){
 		$(this).panel("open");
 	});

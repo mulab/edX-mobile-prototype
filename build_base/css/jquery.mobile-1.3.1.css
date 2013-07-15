@@ -3140,7 +3140,7 @@ div.ui-slider-switch.ui-mini {
 }
 /* panel */
 .ui-panel {
-	width: 75%;
+	width: 17em;
 	min-height: 100%;
 	max-height: none;
 	border-width: 0;
@@ -3149,12 +3149,10 @@ div.ui-slider-switch.ui-mini {
 	display: block;
 }
 .ui-panel-closed {
-	width: 75%;
-	left:-50%;
-	right:75%;
+	width: 0;
 	max-height: 100%;
 	overflow: hidden;
-	/*visibility: hidden;*/
+	visibility: hidden;
 }
 .ui-panel-fixed {
 	position: fixed;
@@ -3176,7 +3174,7 @@ div.ui-slider-switch.ui-mini {
 /* content-wrap */
 .ui-panel-content-wrap {
 	position: relative;
-	left: 25%;
+	left: 0;
 	min-height: inherit;
 	border: none;
 	z-index: 999;
@@ -3184,8 +3182,7 @@ div.ui-slider-switch.ui-mini {
 .ui-panel-content-wrap-display-overlay,
 .ui-panel-animate.ui-panel-content-wrap > .ui-header, /* ios4 fix */
 .ui-panel-content-wrap-closed {
-	/*position: static;*/
-	
+	position: static;
 }
 /* dismiss */
 .ui-panel-dismiss {
@@ -3212,13 +3209,13 @@ div.ui-slider-switch.ui-mini {
 .ui-panel-animate.ui-panel-closed.ui-panel-display-reveal > div,
 .ui-panel-animate.ui-panel-content-wrap,
 .ui-panel-animate.ui-panel-content-fixed-toolbar {
-	/*-webkit-backface-visibility: hidden;*/
+	-webkit-backface-visibility: hidden;
 	-webkit-transform: translate3d(0,0,0);
 }
 /* positioning: panel */
 /* panel left  */
 .ui-panel-position-left {
-	left: -50%;
+	left: -17em;
 }
 /* animated: panel left (for overlay and push) */
 .ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay,
@@ -3229,13 +3226,9 @@ div.ui-slider-switch.ui-mini {
 	transform: translate3d(-17em,0,0);
 }
 /* panel left open */
-.ui-panel-position-left.ui-panel-display-reveal{
-	left:-50%;
-}
- /* negate "panel left" for reveal */
+.ui-panel-position-left.ui-panel-display-reveal, /* negate "panel left" for reveal */
 .ui-panel-position-left.ui-panel-open {
 	left: 0;
-	width: 100%;
 }
 /* animated: panel left open (for overlay and push) */
 .ui-panel-animate.ui-panel-position-left.ui-panel-open.ui-panel-display-overlay,
@@ -3273,19 +3266,19 @@ div.ui-slider-switch.ui-mini {
 .ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open,
 .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
 .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
-	left: 100%;
-	right: -100%;
+	left: 17em;
+	right: -17em;
 }
 /* animated: panel left open (for reveal and push) */
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal,
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push,
 .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal,
 .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
-	left: 25%;
+	left: 0;
 	right: 0;
-	-webkit-transform: translate3d(100%,0,0);
-	-moz-transform: translate3d(100%,0,0);
-	transform: translate3d(100%,0,0);
+	-webkit-transform: translate3d(17em,0,0);
+	-moz-transform: translate3d(17em,0,0);
+	transform: translate3d(17em,0,0);
 }
 /* panel right open */
 .ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open,
