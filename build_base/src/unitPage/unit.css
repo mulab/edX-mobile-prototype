@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#nav_scroll {
+    width: 900em;
+    overflow: hidden;
+    position: relative;
+}
+#nav_scroll_holder {
+    margin-left: 5em;
+    margin-right: 7em;
+    overflow: hidden;
+}
+.horizontalButton{
+    float: none;
+    display: inline-block;
+}
