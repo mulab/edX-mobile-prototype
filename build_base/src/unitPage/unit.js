@@ -74,13 +74,19 @@ $(document).ready(function(){
             var tmp = p.verticals[i];
             if(tmp.components==null)continue;
             if(tmp.components[0].type=="problem")
+            {
                 $('#nav_scroll_container').append(
                     '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton ui-btn-active">'+tmp.display_name+'</a>'
                 );
-            else
+                $('.nav_scroll_container').trigger("create");
+            }
+        else
+            {
                 $('#nav_scroll_container').append(
                     '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton ui-btn-active">'+tmp.display_name+'</a>'
                 );
+                $('.nav_scroll_container').trigger("create");
+            }
         }
 
     }
