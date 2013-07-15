@@ -19,13 +19,15 @@ var getVideo = function(coursepath, url_name) {
 	var youtube = xmlDom.getAttribute("youtube");
 	var display_name = xmlDom.getAttribute("display_name");
 	var source = xmlDom.getElementsByTagName("source")[0].getAttribute("src");
-	//TODO: construct component
+	//TODO: construct video player based on source
 }
 
 var getProblem = function(coursepath, url_name) {
 	var xmlDom = loadXmlFile(coursepath + "problem/" + url_name + ".xml");
+    //TODO:
 }
 
 var getDiscussion = function(coursepath, url_name) {
 	var xmlDom = loadXmlFile(coursepath + "discussion/" + url_name + ".xml");
+    //TODO:
 }
