@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>build_base</title>
-	<link rel="stylesheet" href="./css/jquery.mobile-1.3.1.css"/>
+	<link rel="stylesheet" href="./css/jquery.mobile-1.3.1-cg.css"/>
     <link rel="stylesheet" href="./css/jquery.mobile.flatui.css"/>
     <link rel="stylesheet" href="./css/jquery.mobile.structure-1.3.1.css">
     <link rel="stylesheet" href="./css/jquery.mobile.theme-1.3.1.css">
@@ -14,61 +14,58 @@
     <script type="text/javascript" src="js/utilities.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript">
-        
         var forBuild = true;
         if (forBuild) {
             alert("start building");
             buildpath = {};
             $.getJSON("./build.json", function(data) {
                 buildpath = data;
-                $.get(buildpath["build-path"] + "template.html", function(r) {
-                    //$('body').html(r);
-                    bodyInner = $('body');
-                    $.ajaxSetup({
-                        async: false
-                    });
-                    $.getJSON(buildpath["build-path"] + "config.json", function(cr) {
-                        var childArray = cr["child"];
-                        for (var childIndex in childArray) {
-                            var child = childArray[childIndex];
-                            var selector = child["selector"];
-                            var exPath = child["ex-path"];
-                            var exCssList = child["ex-css"];
-                            var exJsList = child["ex-js"];
-                            var innerHtml = child["inner-html"];
-                            if (exPath) {
-                                var includePath = buildpath["build-path"] + exPath;
-                                if (innerHtml) {
-                                    $.get(buildpath["build-path"] + exPath + innerHtml, function(ir) {
-                                        bodyInner.find(selector).append(ir);
-                                    });
-                                }
-                                for (var cssIndex in exCssList) {
-                                    $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
-                                }
-                                for (var jsIndex in exJsList) {
-                                    $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + "'>" + "</" + "script>");
-                                }
-
+                //$('body').html(r);
+                bodyInner = $('body');
+                $.ajaxSetup({
+                    async: false
+                });
+                $.getJSON(buildpath["build-path"] + "config.json", function(cr) {
+                    var childArray = cr["child"];
+                    for (var childIndex in childArray) {
+                        var child = childArray[childIndex];
+                        var selector = child["selector"];
+                        var exPath = child["ex-path"];
+                        var exCssList = child["ex-css"];
+                        var exJsList = child["ex-js"];
+                        var innerHtml = child["inner-html"];
+                        if (exPath) {
+                            var includePath = buildpath["build-path"] + exPath;
+                            if (innerHtml) {
+                                $.get(buildpath["build-path"] + exPath + innerHtml, function(ir) {
+                                    bodyInner.find(selector).append(ir);
+                                });
                             }
-                        }
-                        var final_js = cr["final-js"];
-                        $('head').append("<script type='text/javascript' src='" + buildpath["build-path"] + final_js + "'></" + "script>");
-                    });
-                    $.ajaxSetup({
-                        async: true
-                    });
+                            for (var cssIndex in exCssList) {
+                                $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
+                            }
+                            for (var jsIndex in exJsList) {
+                                $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + "'>" + "</" + "script>");
+                            }
 
-                    //initHeader(bodyInner);
-                    //$("div:jqmData(role='page')").trigger("pagecreate");
-                    //$('body').append(bodyInner);
-                    // $("div:jqmData(role='page')").append("<div>test</div>");
-                    // $('body').append("<div>hhhhhhhhhhhhh</div>");
-                    // $('.page').append("hahaha")
-                    //var html = $('html').html();
-                    //$('body').append('<div>result:</div><div id="result"></div>');
-                    //$('#result').text("'<html>" + html + "</html>'");
-                }, "html");
+                        }
+                    }
+                    var final_js = cr["final-js"];
+                    $('head').append("<script type='text/javascript' src='" + buildpath["build-path"] + final_js + "'></" + "script>");
+                });
+                $.ajaxSetup({
+                    async: true
+                });
+
+                //initHeader(bodyInner);
+                //$("div:jqmData(role='page')").trigger("pagecreate");
+                //$('body').append(bodyInner);
+                // $("div:jqmData(role='page')").append("<div>test</div>");
+                // $('body').append("<div>hhhhhhhhhhhhh</div>");
+                // $('.page').append("hahaha")
+                //var html = $('html').html();
+                //$('body').append('<div>result:</div><div id="result"></div>');
+                //$('#result').text("'<html>" + html + "</html>'");
             });
         }
     </script>
@@ -76,6 +73,7 @@
 </head>
 <body>
 <div data-role="page" class="page">
+    <div data-role="panel" id="panel"></div>
 <div data-role="header" ></div>
 <div data-role="content">
 </div>

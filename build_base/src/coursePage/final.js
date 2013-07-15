@@ -1,1 +1,2 @@
 initHeader(bodyInner);
+initPanel(bodyInner);

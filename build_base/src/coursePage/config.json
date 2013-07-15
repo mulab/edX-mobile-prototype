@@ -17,20 +17,20 @@
             "inner-html": "content.html"
         },
         {
+            "name": "panel",
+            "selector": "div:jqmData(role='panel')",
+            "ex-path": "extra/",
+            "ex-css": ["panel.css"],
+            "ex-js": ["panel.js"],
+            "inner-html": "panel.html"
+        },
+        {
             "name": "header",
             "selector": "div:jqmData(role='header')",
             "ex-path": "extra/",
             "ex-css": [],
             "ex-js": ["header.js"],
             "inner-html": "header.html"
-        },
-        {
-            "name": "sidebar",
-            "selector": "div.sidebar",
-            "ex-path": "extra/",
-            "ex-css": ["sidebar.css"],
-            "ex-js": [],
-            "inner-html": "sidebar.html"
         },
         {
             "name": "main",
