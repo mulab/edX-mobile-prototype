@@ -1,11 +1,15 @@
+
 var getHTML = function(coursepath, url_name) {
 	var xmlDom = loadXmlFile(coursepath + "html/" + url_name + ".xml");
 	xmlDom = xmlDom.getElementsByTagName("html")[0];
 	if (xmlDom.hasAttribute("filename")) {
-		//TODO: load the following file into corresponding position.
-		coursepath + xmlDom.getAttribute("filename") + ".html";
+		var dom;
+		$.ajaxSetup({async:false});
+		$.get(coursepath + xmlDom.getAttribute("filename") + ".html", function(data){dom=data;});
+		$.ajaxSetup({async:true});
+		return dom;
 	} else {
-		//TODO: load the childNodes of xmlDom into corresponding position.
+		return $(xmlDom).html();
 	}
 }
 
