@@ -1,5 +1,8 @@
 var verticalControl = {}, p, coursePath = "../../../data/2013_Spring_Tsinghua";
 $(document).ready(function () {
+    $('#nav_scroll_container').html("");
+    var coursepath = localStorage.getItem('coursepath');
+    var verticalIndex = localStorage.getItem('verticalIndex');
     verticalControl.current = 0;
     verticalControl.start = 0;
     verticalControl.showNum = Math.floor($('#nav_scroll_holder').width() / $('.horizontalButton').width());
@@ -25,6 +28,7 @@ $(document).ready(function () {
         }
         $('#content_holder').html('');
         ///////////////////////////////////
+        $($('#nav_scroll_container').children("a")[verticalControl.current]).trigger("click");
     };
     var move = function (k) {
         if (k < 0 || k >= verticalControl.num) {
@@ -62,8 +66,8 @@ $(document).ready(function () {
     $('#right_button').click(function () {
         verticalControl.turnRight();
     });
-    //p = $.parseJSON(localStorage.getItem('unitData'));
-    p = obj[0].sequentials[0];
+    p = $.parseJSON(localStorage.getItem('unitData'));
+    //p = obj[0].sequentials[0];
     if (p != null) {
         if (p.display_name)
             $('#title').html(document.title = p.display_name);
@@ -74,18 +78,26 @@ $(document).ready(function () {
             if (tmp.components == null)continue;
             if (tmp.components[0].type == "problem") {
                 $('#nav_scroll_container').append(
-                    '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton ui-btn-active">' + tmp.display_name + '</a>'
+                    '<a data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton ui-btn-active">'+tmp.components[0].type+'</a>'
                 );
-                $('.nav_scroll_container').trigger("create");
+                verticalControl.num ++;
+                $('#nav_scroll_container').trigger("create");
             }
             else {
                 $('#nav_scroll_container').append(
-                    '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton ui-btn-active">' + tmp.display_name + '</a>'
+                    '<a data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton ui-btn-active">'+tmp.components[0].type+'</a>'
                 );
-                $('.nav_scroll_container').trigger("create");
+                verticalControl.num ++;
+                $('#nav_scroll_container').trigger("create");
             }
+            $($('#nav_scroll_container').find('a')[i]).click({"url_name":tmp.components[0].url_name},function(event){
+                var verticalHTML = getHTML(coursepath,event.data.url_name);
+                $('#content_holder').html(verticalHTML);
+            });
         }
 
     }
+    for(var i = 0;i<localStorage.getItem('verticalIndex');i++)verticalControl.turnRight();
     verticalControl.refresh();
+    $($('#nav_scroll_container').children("a")[localStorage.getItem('verticalIndex')]).trigger("click");
 });

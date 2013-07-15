@@ -5,11 +5,13 @@ var getHTML = function(coursepath, url_name) {
 	if (xmlDom.hasAttribute("filename")) {
 		var dom;
 		$.ajaxSetup({async:false});
-		$.get(coursepath + xmlDom.getAttribute("filename") + ".html", function(data){dom=data;});
+		$.get(coursepath + "html/"+xmlDom.getAttribute("filename") + ".html", function(data){
+			dom=data;
+		});
 		$.ajaxSetup({async:true});
 		return dom;
 	} else {
-		return $(xmlDom).html();
+		return $(XMLtoString(xmlDom));
 	}
 }
 
