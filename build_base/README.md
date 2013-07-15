@@ -1,4 +1,5 @@
 build_base.html可作为page模版页使用，需要和build.json放在同一目录
+注意：引用的图片资源的目录一定要写相对于base_build.html（这里是course.html）的
 
 在目录./src/coursePage/下必须包含config.json
 
@@ -50,4 +51,4 @@ child元素的内容
 
 **！！！对于jquery mobile widget，一定要调用.trigger("create")来渲染！！！**
 
-注意：引用的图片资源的目录一定要写相对于base_build.html（这里是course.html）的
+
