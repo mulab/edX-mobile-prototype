@@ -1,13 +1,10 @@
-build_base.html可作为page模版页使用，需要和build.json放在同一目录
-注意：引用的图片资源的目录一定要写相对于base_build.html（这里是course.html）的
-
-在目录./src/coursePage/下必须包含config.json
+build_base.html作为page模版页使用，需要和build.json放在同一目录
 
 build.json内容
 ====================
 * `build-path`: "源码"路径，build_base.html将从该目录加载页面所需的资源
 
-如对于课程页面course.html,可以直接将build_base.html复制到course.html中，
+如对于课程页面course.html，可以直接将build_base.html复制到course.html中，
 
 build.json如下：
 
@@ -18,6 +15,10 @@ build.json如下：
 
 config.json内容
 ====================
+在目录./src/coursePage/下必须包含config.json
+
+**注意：引用的静态资源（比如图片）的目录一定要写相对于base_build.html（这里是course.html）的**
+
 * `child`：一个json数组，表明模版页中的child元素如何加载，
 * `final-js`：页面加载后需要运行的js，通常对于每个child组件，应当将child组件的所有用于modify的js写在一个函数中，建议命名为initChildName
 然后在`final-js`对应的文件中调用这些函数来对组件初始化。
