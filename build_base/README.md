@@ -8,10 +8,11 @@ build.json内容
 
 build.json如下：
 
-
-	{
-		"build-path":"./src/coursePage/"
-	}
+```json
+{
+	"build-path":"./src/coursePage/"
+}
+```
 
 config.json内容
 ====================
@@ -25,16 +26,16 @@ config.json内容
 
 如下为一个child元素的例子：
 
-
-	{
-		"name": "page",
-		"selector": "div:jqmData(role='page')",
-		"ex-path": "ex/",
-		"ex-css": [],
-		"ex-js": [],
-		"inner-html": ""
-	}
-
+```json
+{
+	"name": "page",
+	"selector": "div:jqmData(role='page')",
+	"ex-path": "ex/",
+	"ex-css": [],
+	"ex-js": [],
+	"inner-html": ""
+}
+```
 
 child元素的内容
 ---------------------
