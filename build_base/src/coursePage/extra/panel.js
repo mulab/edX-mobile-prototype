@@ -115,8 +115,8 @@ var initPanel = function(bodyInner) {
     var coursepath;
     var paneltree = {};
     var getCoursepath = function() {
-        if(storage.hasOwnProperty("coursepath")){
-            coursepath = storage.getItem("coursepath");
+        if(storage.hasOwnProperty("raw_coursepath")){
+            coursepath = storage.getItem("raw_coursepath");
         }
         else coursepath = "../data/2013_Spring_Tsinghua/";
         debug = false;

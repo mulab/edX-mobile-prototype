@@ -14,7 +14,7 @@
 .course-teacher{
 	height:100%;
 	display: inline;
-	max-width: 20%;
+	/*max-width: 20%;*/
 	position: absolute;
 	top:0;
 	left:60%;
