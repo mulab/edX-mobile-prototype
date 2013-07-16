@@ -1,5 +1,7 @@
-var verticalControl = {}, p, coursePath = "../../../data/2013_Spring_Tsinghua/";
+var verticalControl = {}, p, coursePath = "", verticalIndex = 0;
 $(document).ready(function(){
+    //$('#nav_scroll_container').html("");
+
     verticalControl.current = 0;
         verticalControl.start = 0;
         verticalControl.showNum = Math.floor($('#nav_scroll_holder').width() / $('.horizontalButton').width());
@@ -62,7 +64,5 @@ $(document).ready(function(){
     $('#left_button').click(function(){verticalControl.turnLeft();});
     $('#right_button').click(function(){verticalControl.turnRight();});
     //$('div[data-role=content]').trigger('create');
-    //p = $.parseJSON(localStorage.getItem('unitData'));
-
-    verticalControl.refresh();
+    verticalControl.move(verticalIndex);
 });
