@@ -39,6 +39,12 @@ function clearDoneAll()
 {
     clearDone(totalNum[2]-1);
 }
+function swipeleft(){
+    $('.container_12').animate({left:'-38em'},500);
+}
+function swiperight(){
+    $('.container_12').animate({left:'0'},500);
+}
 function readVertical()
 {
     ///////////// <- Expand Verticals and Record Progress
