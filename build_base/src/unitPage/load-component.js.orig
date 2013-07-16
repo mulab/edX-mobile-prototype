@@ -1,7 +1,14 @@
+
 var getHTML = function(coursepath, url_name) {
 	var xmlDom = loadXmlFile(coursepath + "html/" + url_name + ".xml");
 	xmlDom = xmlDom.getElementsByTagName("html")[0];
 	if (xmlDom.hasAttribute("filename")) {
+<<<<<<< HEAD
+		//TODO: load the following file into corresponding position.
+        return '<iframe src="'+coursepath + xmlDom.getAttribute("filename") + ".html"+'"></iframe>';
+	} else {
+		return '<iframe src="'+coursepath + "html/" + url_name + ".xml"+'"></iframe>';
+=======
 		var dom;
 		$.ajaxSetup({async:false});
 		$.get(coursepath + "html/"+xmlDom.getAttribute("filename") + ".html", function(data){
@@ -11,6 +18,7 @@ var getHTML = function(coursepath, url_name) {
 		return dom;
 	} else {
 		return $(XMLtoString(xmlDom));
+>>>>>>> adade0c071a560e59d386c84591bd8e7aa61d258
 	}
 }
 
@@ -20,17 +28,26 @@ var getVideo = function(coursepath, url_name) {
 	var youtube = xmlDom.getAttribute("youtube");
 	var display_name = xmlDom.getAttribute("display_name");
 	var source = xmlDom.getElementsByTagName("source")[0].getAttribute("src");
+<<<<<<< HEAD
     return '<video controls><source src="'+source+'" type="video/mp4">Your browser does not support the video tag.</video>'
 	//TODO: construct component
+=======
+	//TODO: construct video player based on source
+>>>>>>> adade0c071a560e59d386c84591bd8e7aa61d258
 }
 
 var getProblem = function(coursepath, url_name) {
 	var xmlDom = loadXmlFile(coursepath + "problem/" + url_name + ".xml");
+<<<<<<< HEAD
     return 'Problems are not supported yet.';
+=======
+    //TODO:
+>>>>>>> adade0c071a560e59d386c84591bd8e7aa61d258
 }
 
 var getDiscussion = function(coursepath, url_name) {
 	var xmlDom = loadXmlFile(coursepath + "discussion/" + url_name + ".xml");
+<<<<<<< HEAD
     return 'Discussions are not supported yet.';
 }
 
@@ -42,3 +59,7 @@ var loadComponent = function(component, coursepath){
         case 'discussion': return getDiscussion(coursepath, component.url_name);
     }
 }
+=======
+    //TODO:
+}
+>>>>>>> adade0c071a560e59d386c84591bd8e7aa61d258

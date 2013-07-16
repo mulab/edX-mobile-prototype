@@ -1,0 +1,24 @@
+#header{
+	height:13%;
+}
+.course-pic,.course-pic > img{
+	height:100%;
+	display: inline;
+	max-width: 20%;
+}
+.course-title{
+	position: absolute;;
+	top:0;
+	left:20%;
+}
+.course-teacher{
+	height:100%;
+	display: inline;
+	max-width: 20%;
+	position: absolute;
+	top:0;
+	left:60%;
+}
+.course-teacher > img{
+	height: 100%;
+}

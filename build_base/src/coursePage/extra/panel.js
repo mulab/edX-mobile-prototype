@@ -3,6 +3,7 @@ var initPanel = function(bodyInner){
 	var weeklist = bodyInner.find("ul#weeklist");
 	var sublist = bodyInner.find("ul#sublist");
 	var verticallist = bodyInner.find("ul#verticallist");
+    var storage = window.localStorage;
 	$("div:jqmData(role='panel')").on("swiperight",function(){
 		$(this).panel("open");
 	});
@@ -131,11 +132,14 @@ var initPanel = function(bodyInner){
     					for(var verticalIndex in verticalSet){
     						var vertical = verticalSet[verticalIndex];
     						var vertical_name = (vertical.hasOwnProperty("display_name"))?vertical["display_name"]:vertical["url_name"];
+                            storage.setItem("unitData",JSON.stringify(event.data.sequential));
+                            storage.setItem("coursepath","../../"+coursepath);
     						verticallist.append("<li>"+vertical_name+"</li>");
-    						$(verticallist.children("li")[verticalIndex]).click((function(){
-    							//TODO
-    							alert("hello!code not completed!");
-    						}));
+                            $(verticallist.children("li")[verticalIndex]).click({"verticalIndex":verticalIndex},function(event){
+                                //window.location.href = "./src/unitPage/unit.html";
+                                storage.setItem("verticalIndex",event.data.verticalIndex);
+                                self.location.href = "./src/unitPage/unit.html";
+                            });
     					}
     					verticallist.listview("refresh");
     				}));

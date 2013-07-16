@@ -57,4 +57,7 @@ try
 catch(e) {alert(e.message)}
 return(null);
 }
+<<<<<<< HEAD
+=======
 function XMLtoString(elem){ var serialized; try {serializer = new XMLSerializer();serialized = serializer.serializeToString(elem);} catch (e) { serialized = elem.xml; } return serialized; }
+>>>>>>> adade0c071a560e59d386c84591bd8e7aa61d258
