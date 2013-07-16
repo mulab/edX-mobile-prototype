@@ -16,11 +16,11 @@
     <script>
         $(document).ready(function(){
             $('#link1').click(function(){
-                localStorage.setItem('coursepath','../data/2013_Spring_Tsinghua/');
+                localStorage.setItem('raw_coursepath','../data/2013_Spring_Tsinghua/');
                 self.location.href = '../../coursePage_build.html';
             });
             $('#link2').click(function(){
-                localStorage.setItem('coursepath','../data/Software_as_a_Service/');
+                localStorage.setItem('raw_coursepath','../data/Software_as_a_Service/');
                 self.location.href = '../../coursePage_build.html';
             });
         });
@@ -45,7 +45,7 @@
                 <p>TsinghuaX</p>
             </a>
             </li>
-            <li data-role="list-divider" data-theme="c"></li>
+            <li data-role="list-divider" data-theme="e"></li>
             <li><a href="#" id="link2">
                 <img src="../../../data/Software_as_a_Service/static/images/course_image.jpg">
                 <h2>Software as a Service II</h2>
@@ -53,7 +53,7 @@
                 <p>BerkeleyX</p>
             </a>
             </li>
-            <li data-role="list-divider" data-theme="c"></li>
+            <li data-role="list-divider" data-theme="e"></li>
         </ul>
 		<!--TODO: generate two rows for 2013_Spring_Tsinghua and Software_as_a_Service-->
 	</div>
