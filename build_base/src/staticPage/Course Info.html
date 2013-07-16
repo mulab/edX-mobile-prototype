@@ -16,6 +16,7 @@
     <![endif]-->
     <script type="text/javascript">
         $(document).ready(function () {
+            coursepath = localStorage.getItem('coursepath');
             $(".Handouts_contain").load(coursepath + "/info/handouts.html");
             $(".Updates_contain").load(coursepath + "/info/updates.html");
         })
