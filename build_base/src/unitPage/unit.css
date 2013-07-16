@@ -6,6 +6,7 @@
     width: 900em;
     overflow: hidden;
     position: relative;
+
 }
 #nav_scroll_holder {
     position: fixed;
@@ -13,13 +14,19 @@
     right: 7em;
     top: 3.5em;
     overflow: hidden;
+    z-index: 10999;
 }
 .horizontalButton{
     float: none;
     display: inline-block;
 }
+#content_holder {
+    margin-top: 3.5em;
+}
 .ui-content {
     position: absolute;
-    top:43px;
-    bottom: 44px;
+    top:3.5em;
+    bottom: 3.5em;
+    left:0;
+    right:0;
 }
