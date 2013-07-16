@@ -14,11 +14,19 @@
 .course-teacher{
 	height:100%;
 	display: inline;
-	/*max-width: 20%;*/
+	/*max-width: 40%;*/
+	width:40%;
 	position: absolute;
 	top:0;
 	left:60%;
 }
 .course-teacher > img{
 	height: 100%;
+}
+.back-home{
+	display: inline;
+	max-width: 10%;
+	position: absolute;
+	top: 0;
+	right: 0;
 }

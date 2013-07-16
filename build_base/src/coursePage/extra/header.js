@@ -68,4 +68,5 @@ var initHeader = function(bodyInner){
 	loadTeacher(root_path);
 	loadCourseImage(root_path);
 	render();
+	$('div.back-home').trigger("create");
 }

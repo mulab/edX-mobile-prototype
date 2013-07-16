@@ -15,7 +15,7 @@
         
         var forBuild = true;
         if (forBuild) {
-            alert("start building");
+            //alert("start building");
             buildpath = {};
             $.getJSON("./coursePage_build.json", function(data) {
                 buildpath = data;
@@ -50,7 +50,7 @@
                         }
                     }
                     var final_js = cr["final-js"];
-                    console.log(function XMLtoString(elem){ var serialized; try {serializer = new XMLSerializer();serialized = serializer.serializeToString(elem);} catch (e) { serialized = elem.xml; } return serialized; }(document));
+                    //console.log(function XMLtoString(elem){ var serialized; try {serializer = new XMLSerializer();serialized = serializer.serializeToString(elem);} catch (e) { serialized = elem.xml; } return serialized; }(document));
                     $('head').append("<script type='text/javascript' src='" + buildpath["build-path"] + final_js + "'></" + "script>");
                 });
                 $.ajaxSetup({
@@ -75,7 +75,7 @@
 <div data-role="page" class="page">
     <div data-role="panel" id="panel"></div>
 <div data-role="header" data-position="fixed" id="header"></div>
-<div data-role="content">
+<div data-role="content" id="content">
 </div>
 </div>
 </body>

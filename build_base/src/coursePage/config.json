@@ -12,8 +12,8 @@
             "name": "content",
             "selector": "div:jqmData(role='content')",
             "ex-path": "extra/",
-            "ex-css": [],
-            "ex-js": [],
+            "ex-css": ["content.css"],
+            "ex-js": ["content.js"],
             "inner-html": "content.html"
         },
         {
