@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../../js/utilities.js"></script>
     <script type="text/javascript" src="unit.js"></script>
     <script type="text/javascript" src="unit_loader.js"></script>
+    <script type="text/javascript" src="load-component.js"></script>
 </head>
 <body>
 <div data-role="header">
@@ -28,18 +29,38 @@
         <div id="nav_scroll_holder">
             <div id="nav_scroll">
                 <div data-role="controlgroup" data-type="horizontal" id="nav_scroll_container">
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton ui-btn-active">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="edit" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="plus" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="bars" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-icon="edit" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-icon="bars" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" data-icon="edit" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" class="horizontalButton">Vertical 1</a>
-                    <a href="#" data-theme="c" data-role="button" data-iconpos="left" class="horizontalButton">Vertical 1</a>
+                    <script>
+                        p = obj[3].sequentials[0];
+                        if(p!=null)
+                        {
+                            if(p.display_name)
+                                $('#title').html(document.title = p.display_name);
+                            else
+                                $('#title').html(document.title = p.url_name);
+                            for(var i in p.verticals)
+                            {
+                                var tmp = p.verticals[i];
+                                if(tmp.display_name==null)tmp.display_name="Untitled";
+                                if(tmp.components==null)continue;
+                                if(tmp.components[0].type=="problem")
+                                {
+                                    //$('#nav_scroll_container').append(
+                                    document.write(
+                                            '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton">'+tmp.display_name+'</a>'
+                                    );
+
+                                }
+                                else
+                                {
+                                    //$('#nav_scroll_container').append(
+                                    document.write(
+                                            '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton">'+tmp.display_name+'</a>'
+                                    );
+                                }
+                            }
+
+                        }
+                    </script>
                 </div>
             </div>
         </div>

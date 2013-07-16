@@ -1,4 +1,4 @@
-var verticalControl = {}, p, coursePath = "../../../data/2013_Spring_Tsinghua";
+var verticalControl = {}, p, coursePath = "../../../data/2013_Spring_Tsinghua/";
 $(document).ready(function(){
     verticalControl.current = 0;
         verticalControl.start = 0;
@@ -17,14 +17,14 @@ $(document).ready(function(){
             }
             $('.horizontalButton').removeClass('ui-btn-active');
             $('.horizontalButton:eq('+String(verticalControl.current)+')').addClass('ui-btn-active');
-            $('#nav_scroll').css('left',String(-verticalControl.start * $('.horizontalButton').width())+'px');
+            $('#nav_scroll').animate({left:String(-verticalControl.start * $('.horizontalButton').width())+'px'},200);
             ///////////////////////////////////
             var Res = '', verticaltmp = p.verticals[verticalControl.current];
             for(var i in verticaltmp.components)
             {
-                Res += verticaltmp.components[i].url_name;
+                Res += '<div>'+loadComponent(verticaltmp.components[i], coursePath)+'</div>';
             }
-            $('#content_holder').html('');
+            $('#content_holder').html(Res);
             ///////////////////////////////////
         };
         var move = function (k) {
@@ -56,39 +56,13 @@ $(document).ready(function(){
         }
 
     $('.horizontalButton').mouseup(function(){
-        verticalControl.move($(this).index());
+        verticalControl.move($(this).index()-1); // -1 because of <script> tag
         //alert($(this).index());
     });
     $('#left_button').click(function(){verticalControl.turnLeft();});
     $('#right_button').click(function(){verticalControl.turnRight();});
+    //$('div[data-role=content]').trigger('create');
     //p = $.parseJSON(localStorage.getItem('unitData'));
-    p = obj[0].sequentials[0];
-    if(p!=null)
-    {
-        if(p.display_name)
-            $('#title').html(document.title = p.display_name);
-        else
-            $('#title').html(document.title = p.url_name);
-        for(var i in p.verticals)
-        {
-            var tmp = p.verticals[i];
-            if(tmp.components==null)continue;
-            if(tmp.components[0].type=="problem")
-            {
-                $('#nav_scroll_container').append(
-                    '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton ui-btn-active">'+tmp.display_name+'</a>'
-                );
-                $('.nav_scroll_container').trigger("create");
-            }
-        else
-            {
-                $('#nav_scroll_container').append(
-                    '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton ui-btn-active">'+tmp.display_name+'</a>'
-                );
-                $('.nav_scroll_container').trigger("create");
-            }
-        }
 
-    }
     verticalControl.refresh();
 });
