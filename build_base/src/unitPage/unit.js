@@ -4,7 +4,11 @@ $(document).ready(function(){
 
     verticalControl.current = 0;
         verticalControl.start = 0;
-        verticalControl.showNum = Math.floor($('#nav_scroll_holder').width() / $('.horizontalButton').width());
+        verticalControl.showNum = Math.floor($('#nav_scroll_holder').width() / $('.horizontalButton').width()) - 1;
+        if (verticalControl.showNum <= 0)
+            verticalControl.showNum = 1;
+        //TODO: calculate showNum NOT according to fix width.
+        //TODO: fix error: Error in event handler for 'undefined': IndexSizeError: DOM Exception 1 Error: Index or size was negative, or greater than the allowed value.
         verticalControl.unitWidth = $('.horizontalButton').width();
         /*verticalControl.buttons = $('.horizontalButton');
         verticalControl.holder = $('#nav_scroll_holder');
@@ -38,7 +42,7 @@ $(document).ready(function(){
             if(k - verticalControl.start +1 > verticalControl.showNum){
                 verticalControl.start = k - verticalControl.showNum + 1;
             }
-            if(k<verticalControl.start)
+            if(k < verticalControl.start)
             {
                 verticalControl.start = k;
             }
