@@ -86,8 +86,8 @@ var initPanel = function(bodyInner) {
         return makeColor(ColorGroup[Math.floor((Math.random() * ColorGroup.length))]);
     };
     var displayHack = function() {
-        verticallist.addClass("ui-sidetag-panel-closed");
-        sidetag.css("width", $("div:jqmData(role='panel')").css("height"));
+        //verticallist.addClass("ui-sidetag-panel-closed");
+        //sidetag.css("width", $("div:jqmData(role='panel')").css("height"));
         sublist.find("li>.colorTag").each(function(index, element) {
             $(element).css('background-color', randomColor());
         });
@@ -109,8 +109,8 @@ var initPanel = function(bodyInner) {
         verticallist.css("margin-left", 0);
     });
     $("div:jqmData(role='panel')").on("panelclose", function(event, ui) {
-        sidetag.css("visibility", "visible");
-        verticallist.css("margin-left", "1.5em");
+        //sidetag.css("visibility", "visible");
+        //verticallist.css("margin-left", "1.5em");
     });
     var coursepath;
     var paneltree = {};

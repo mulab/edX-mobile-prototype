@@ -1,5 +1,5 @@
 #header{
-	height:13%;
+	height:4.5em;
 }
 .course-pic,.course-pic > img{
 	height:100%;
@@ -15,7 +15,7 @@
 	height:100%;
 	display: inline;
 	/*max-width: 40%;*/
-	width:40%;
+	width:50%;
 	position: absolute;
 	top:0;
 	left:60%;
