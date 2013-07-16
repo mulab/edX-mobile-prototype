@@ -65,4 +65,6 @@ $(document).ready(function(){
     $('#right_button').click(function(){verticalControl.turnRight();});
     //$('div[data-role=content]').trigger('create');
     verticalControl.move(verticalIndex);
+    $('#content_holder').swipeleft(function(){verticalControl.turnLeft();});
+    $('#content_holder').swipeleft(function(){verticalControl.turnRight();});
 });
