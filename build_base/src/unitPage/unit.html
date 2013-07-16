@@ -16,13 +16,14 @@
 </head>
 <body>
 <div data-role="header">
-    <a href="#" data-icon="arrow-l">Return</a>
+    <a href="javascript: self.location.href = '../../coursePage_build.html'" data-icon="arrow-l">Return</a>
     <h1 id="title">Vertical_Name</h1>
 </div>
 <div data-role="content">
         <div style="width:100%;">
-        <div style="float: left">
-            <div style="background-color: #ffffff">
+            <div style="background-color: #ffffff; opacity:0.8; position: fixed; top: 3.5em; left: 0; right: 0; z-index: 10998; height: 3.4em"></div>
+        <div style="float: left; position: fixed; left: 0; top: 3.5em; z-index: 11000">
+            <div>
             <a href="#" id="left_button" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="left" data-inline="true">Left</a>
             </div>
         </div>
@@ -72,18 +73,18 @@
                 </div>
             </div>
         </div>
-        <div style="float:right; position: relative; top: -3.5em">
-            <div style="background-color: #ffffff; z-index: 10000">
+        <div style="float:right; position: fixed; top: 3.5em; right: 1em; z-index: 11000">
+            <div style=" z-index: 10000">
             <a href="#" id="right_button" data-role="button" data-theme="b" data-icon="arrow-r" data-iconpos="right" data-inline="true">Right</a>
             </div>
         </div>
         </div>
-        <div id="content_holder">
+        <div id="content_holder" style="min-height: 100%">
 
         </div>
 </div>
-<div data-role="footer">
-
+<div data-role="footer" data-position="fixed">
+    <h1>edX mobile</h1>
 </div>
 </body>
 </html>

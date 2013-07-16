@@ -6,22 +6,58 @@
 	<!--save a bookmark to the app to the home screen, then open in full-screen mode-->
 	<title>edX Dashboard</title>
 	<link rel="stylesheet" href="../../css/jquery.mobile.structure-1.3.1.min.css">
-    <!--<link rel="stylesheet" href="../../css/jquery-mobile-fluid960.min.css">
-    <link rel="stylesheet" href="../../css/jquery.mobile.flatui.css">-->
-    <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.theme-1.3.1.min.css">
+    <link rel="stylesheet" href="../../css/jquery-mobile-fluid960.min.css">
+    <link rel="stylesheet" href="../../css/jquery.mobile.flatui.css">
+    <!--link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.theme-1.3.1.min.css"-->
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../js/jquery.mobile-1.3.1.js"></script>
     <script type="text/javascript" src="../../js/utilities.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#link1').click(function(){
+                localStorage.setItem('raw_coursepath','../data/2013_Spring_Tsinghua/');
+                self.location.href = '../../coursePage_build.html';
+            });
+            $('#link2').click(function(){
+                localStorage.setItem('raw_coursepath','../data/Software_as_a_Service/');
+                self.location.href = '../../coursePage_build.html';
+            });
+        });
+    </script>
+    <style>
+        .ui-header{
+            height: 3em;
+        }
+    </style>
 </head>
 <body>
 	<div data-role="header">
-		<img id="edx-logo" src="../../img/header-logo.png">
+		<img id="edx-logo" src="../../img/header-logo.png" style="float: left">
+        <h1>My Courses</h1>
 	</div>
 	<div data-role="content">
-		;
+        <ul data-role="listview" data-inset="true" data-theme="f">
+            <li><a href="#" id="link1">
+                <img src="../../../data/2013_Spring_Tsinghua/static/images/course_image.jpg">
+                <h2>Software as a Service I</h2>
+                <p>CS169.1x</p>
+                <p>TsinghuaX</p>
+            </a>
+            </li>
+            <li data-role="list-divider" data-theme="e"></li>
+            <li><a href="#" id="link2">
+                <img src="../../../data/Software_as_a_Service/static/images/course_image.jpg">
+                <h2>Software as a Service II</h2>
+                <p>CS169.2x</p>
+                <p>BerkeleyX</p>
+            </a>
+            </li>
+            <li data-role="list-divider" data-theme="e"></li>
+        </ul>
+		<!--TODO: generate two rows for 2013_Spring_Tsinghua and Software_as_a_Service-->
 	</div>
-	<div data-role="footer" id="footer">
+	<div data-role="footer" id="footer" data-position="fixed">
 		by  <span><a id="lab-mu" href="http://www.lab.mu">Lab μ</a></span>  2013
 	</div>
 </body>
