@@ -1,8 +1,12 @@
 var initPanel = function(bodyInner){
+    var displayHack = function(){
+        sidetag.css("width",$("div:jqmData(role='panel')").css("height"));
+    };
 	bodyInner.find("div:jqmData(role='panel')").trigger("create");
 	var weeklist = bodyInner.find("ul#weeklist");
 	var sublist = bodyInner.find("ul#sublist");
 	var verticallist = bodyInner.find("ul#verticallist");
+    var sidetag = bodyInner.find('.sidetag');
     var storage = window.localStorage;
 	$("div:jqmData(role='panel')").on("swiperight",function(){
 		$(this).panel("open");
@@ -120,8 +124,11 @@ var initPanel = function(bodyInner){
     		weeklist.append("<li>"+display_name+"</li>");
     		$(weeklist.children("li")[chapterIndex]).click({"chapter":chapter},(function(event){
     			var sequentials = event.data.chapter["sequentials"];
+                var sidetag_week = (event.data.chapter.hasOwnProperty("display_name"))?event.data.chapter["display_name"]:event.data.chapter["url_name"];
     			sublist.html("");
                 verticallist.html("");
+                sidetag.html("");
+                sidetag.append("<span>"+sidetag_week+":&#9</span>")
     			for(var sequentialIndex in sequentials){
     				var sequential = sequentials[sequentialIndex];
     				var sequential_name = (sequential.hasOwnProperty("display_name"))?sequential["display_name"] : sequential["url_name"];
@@ -129,6 +136,14 @@ var initPanel = function(bodyInner){
     				$(sublist.children("li")[sequentialIndex]).click({"sequential":sequential},(function(event){
     					var verticalSet = event.data.sequential["verticals"];
     					verticallist.html("");
+                        var sidetag_sequential = (event.data.sequential.hasOwnProperty("display_name"))?event.data.sequential["display_name"]:event.data.sequential["url_name"];
+                        if(sidetag.find("span").length == 2){
+                            $(sidetag.find("span")[1]).html(sidetag_sequential);
+                        }
+                        else
+                        {
+                            sidetag.append("<span>"+sidetag_sequential+"</span>");
+                        }
     					for(var verticalIndex in verticalSet){
     						var vertical = verticalSet[verticalIndex];
     						var vertical_name = (vertical.hasOwnProperty("display_name"))?vertical["display_name"]:vertical["url_name"];
@@ -155,4 +170,5 @@ var initPanel = function(bodyInner){
     render();
     $(weeklist.children("li")[0]).trigger("click");
     $(sublist.children("li")[0]).trigger("click");
+    displayHack();
 };

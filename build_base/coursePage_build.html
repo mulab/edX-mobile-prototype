@@ -50,7 +50,7 @@
                         }
                     }
                     var final_js = cr["final-js"];
-                    //console.log(function XMLtoString(elem){ var serialized; try {serializer = new XMLSerializer();serialized = serializer.serializeToString(elem);} catch (e) { serialized = elem.xml; } return serialized; }(document));
+                    console.log(function XMLtoString(elem){ var serialized; try {serializer = new XMLSerializer();serialized = serializer.serializeToString(elem);} catch (e) { serialized = elem.xml; } return serialized; }(document));
                     $('head').append("<script type='text/javascript' src='" + buildpath["build-path"] + final_js + "'></" + "script>");
                 });
                 $.ajaxSetup({
