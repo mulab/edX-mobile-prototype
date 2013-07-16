@@ -1,163 +1,101 @@
-<!DOCTYPE html>
-<html lang="en" class="ui-mobile">
-    
-    <head>
-        <base href="file:///C:/Users/cg/git/edx-mobile/build_base/coursePage_build.html">
-        <meta charset="UTF-8">
-        <title>
-            build_base
-        </title>
-        <link rel="stylesheet" href="./css/jquery.mobile.flatui.css">
-        <link rel="stylesheet" href="./css/jquery.mobile-1.3.1-modify.css">
-        <link rel="stylesheet" href="./css/jquery.mobile.theme-1.3.1.css">
-        <script type="text/javascript" src="./js/jquery-1.9.1.min.js">
-        </script>
-        <script type="text/javascript" src="rte/cordova.js">
-        </script>
-        <script type="text/javascript" src="rte/rte.js">
-        </script>
-        <script type="text/javascript" src="js/utilities.js">
-        </script>
-        <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript">
-            var forBuild = false;
-            if (forBuild) {
-                alert("start building");
-                buildpath = {};
-                $.getJSON("./coursePage_build.json",
-                function(data) {
-                    buildpath = data;
-                    //$('body').html(r);
-                    bodyInner = $('body');
-                    $.ajaxSetup({
-                        async: false
-                    });
-                    $.getJSON(buildpath["build-path"] + "config.json",
-                    function(cr) {
-                        var childArray = cr["child"];
-                        for (var childIndex in childArray) {
-                            var child = childArray[childIndex];
-                            var selector = child["selector"];
-                            var exPath = child["ex-path"];
-                            var exCssList = child["ex-css"];
-                            var exJsList = child["ex-js"];
-                            var innerHtml = child["inner-html"];
-                            if (exPath) {
-                                var includePath = buildpath["build-path"] + exPath;
-                                if (innerHtml) {
-                                    $.get(buildpath["build-path"] + exPath + innerHtml,
-                                    function(ir) {
-                                        bodyInner.find(selector).append(ir);
-                                    });
-                                }
-                                for (var cssIndex in exCssList) {
-                                    $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
-                                }
-                                for (var jsIndex in exJsList) {
-                                    $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + "'>" + "</" + "script>");
-                                }
-
-                            }
-                        }
-                        var final_js = cr["final-js"];
-                        console.log(function XMLtoString(elem) {
-                            var serialized;
-                            try {
-                                serializer = new XMLSerializer();
-                                serialized = serializer.serializeToString(elem);
-                            } catch(e) {
-                                serialized = elem.xml;
-                            }
-                            return serialized;
-                        } (document));
-                        $('head').append("<script type='text/javascript' src='" + buildpath["build-path"] + final_js + "'></" + "script>");
-                    });
-                    $.ajaxSetup({
-                        async: true
-                    });
-
-                    //initHeader(bodyInner);
-                    //$("div:jqmData(role='page')").trigger("pagecreate");
-                    //$('body').append(bodyInner);
-                    // $("div:jqmData(role='page')").append("<div>test</div>");
-                    // $('body').append("<div>hhhhhhhhhhhhh</div>");
-                    // $('.page').append("hahaha")
-                    //$('body').append('<div>result:</div><div id="result"></div>');
-                    //$('#result').text("'<html>" + html + "</html>'");
+<!DOCTYPE html><html lang="en" class="ui-mobile"><head><base href="file:///C:/Users/cg/git/edx-mobile/build_base/coursePage_build.html">
+    <meta charset="UTF-8">
+    <title>build_base</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.3.1-modify.css">
+    <link rel="stylesheet" href="./css/jquery.mobile.theme-1.3.1.css">
+    <link rel="stylesheet" href="./css/jquery.mobile.flatui.css">
+    <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="rte/cordova.js"></script>
+    <script type="text/javascript" src="rte/rte.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+        
+        var forBuild = false;
+        if (forBuild) {
+            alert("start building");
+            buildpath = {};
+            $.getJSON("./coursePage_build.json", function(data) {
+                buildpath = data;
+                //$('body').html(r);
+                bodyInner = $('body');
+                $.ajaxSetup({
+                    async: false
                 });
-            }
-        </script>
-        <script type="text/javascript" src="./js/jquery.mobile-1.3.1.js">
-        </script>
-        <link rel="stylesheet" href="./src/coursePage/extra/panel.css">
-        <script type="text/javascript" src="./src/coursePage/extra/panel.js">
-        </script>
-        <link rel="stylesheet" href="./src/coursePage/extra/header.css">
-        <script type="text/javascript" src="./src/coursePage/extra/header.js">
-        </script>
-    </head>
-    
-    <body class="ui-mobile-viewport ui-overlay-c">
-        <div data-role="page" class="page ui-page ui-body-c ui-page-header-fixed ui-page-panel ui-page-active"
-        data-url="/C:/Users/cg/git/edx-mobile/build_base/coursePage_build.html"
-        tabindex="0" style="padding-top: 2px; min-height: 605px;">
-            <div data-role="panel" id="panel" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate">
-                <div class="ui-grid-b">
-                    <div class="ui-block-a">
-                        <ul data-role="listview" id="weeklist">
-                        </ul>
-                    </div>
-                    <div class="ui-block-b">
-                        <ul data-role="listview" id="sublist">
-                        </ul>
-                    </div>
-                    <div class="ui-block-c">
-                        <div class="sidetag" style="z-index:10000;">
-                            <span>
-                                Week 1
-                            </span>
-                            <span>
-                                Lecture 2
-                            </span>
-                        </div>
-                        <ul data-role="listview" id="verticallist">
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div data-role="header" data-position="fixed" id="header" class="ui-header ui-bar-a ui-header-fixed slidedown ui-panel-content-fixed-toolbar ui-panel-animate ui-panel-content-fixed-toolbar-closed"
-            role="banner">
-                <div class="course-pic">
-                </div>
-                <div class="course-title">
-                    <div class="course-title-num">
-                    </div>
-                    <div class="course-title-name">
-                    </div>
-                </div>
-                <div class="course-teacher">
-                </div>
-                <div class="back-home">
-                </div>
-            </div>
-            <div class="ui-panel-content-wrap ui-body-c ui-panel-animate ui-panel-content-wrap-closed">
-                <div data-role="content" class="ui-content" role="main">
-                    <div class="sidebar">
-                    </div>
-                    <div class="main">
-                    </div>
-                </div>
-            </div>
-            <div class="ui-panel-dismiss" data-panelid="panel">
-            </div>
-        </div>
-        <div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
-            <span class="ui-icon ui-icon-loading">
-            </span>
-            <h1>
-                loading
-            </h1>
-        </div>
-    </body>
+                $.getJSON(buildpath["build-path"] + "config.json", function(cr) {
+                    var childArray = cr["child"];
+                    for (var childIndex in childArray) {
+                        var child = childArray[childIndex];
+                        var selector = child["selector"];
+                        var exPath = child["ex-path"];
+                        var exCssList = child["ex-css"];
+                        var exJsList = child["ex-js"];
+                        var innerHtml = child["inner-html"];
+                        if (exPath) {
+                            var includePath = buildpath["build-path"] + exPath;
+                            if (innerHtml) {
+                                $.get(buildpath["build-path"] + exPath + innerHtml, function(ir) {
+                                    bodyInner.find(selector).append(ir);
+                                });
+                            }
+                            for (var cssIndex in exCssList) {
+                                $('head').append('<link rel="stylesheet" href="' + includePath + exCssList[cssIndex] + '" />');
+                            }
+                            for (var jsIndex in exJsList) {
+                                $('head').append("<script type='text/javascript' src='" + includePath + exJsList[jsIndex] + "'>" + "</" + "script>");
+                            }
 
-</html>
+                        }
+                    }
+                    var final_js = cr["final-js"];
+                    console.log(function XMLtoString(elem){ var serialized; try {serializer = new XMLSerializer();serialized = serializer.serializeToString(elem);} catch (e) { serialized = elem.xml; } return serialized; }(document));
+                    $('head').append("<script type='text/javascript' src='" + buildpath["build-path"] + final_js + "'></" + "script>");
+                });
+                $.ajaxSetup({
+                    async: true
+                });
+
+                //initHeader(bodyInner);
+                //$("div:jqmData(role='page')").trigger("pagecreate");
+                //$('body').append(bodyInner);
+                // $("div:jqmData(role='page')").append("<div>test</div>");
+                // $('body').append("<div>hhhhhhhhhhhhh</div>");
+                // $('.page').append("hahaha")
+
+                //$('body').append('<div>result:</div><div id="result"></div>');
+                //$('#result').text("'<html>" + html + "</html>'");
+            });
+        }
+    </script>
+    <script type="text/javascript" src="./js/jquery.mobile-1.3.1.js"></script>
+<link rel="stylesheet" href="./src/coursePage/extra/panel.css"><script type="text/javascript" src="./src/coursePage/extra/panel.js"></script><link rel="stylesheet" href="./src/coursePage/extra/header.css"><script type="text/javascript" src="./src/coursePage/extra/header.js"></script></head>
+<body class="ui-mobile-viewport ui-overlay-c">
+<div data-role="page" class="page ui-page ui-body-c ui-page-header-fixed ui-page-panel ui-page-active" data-url="/C:/Users/cg/git/edx-mobile/build_base/coursePage_build.html" tabindex="0" style="padding-top: 2px; min-height: 605px;">
+    <div data-role="panel" id="panel" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate"><div class="ui-grid-b">
+    <div class="ui-block-a">
+        <ul data-role="listview" id="weeklist">
+        </ul>
+    </div>
+    <div class="ui-block-b">
+        <ul data-role="listview" id="sublist">
+        </ul>
+    </div>
+    <div class="ui-block-c">
+        <div class="sidetag" style="z-index:10000;">
+        <span>Week 1</span>
+        <span>Lecture 2</span>
+        </div>
+        <ul data-role="listview" id="verticallist">
+        </ul>
+    </div>
+</div></div>
+<div data-role="header" data-position="fixed" id="header" class="ui-header ui-bar-a ui-header-fixed slidedown ui-panel-content-fixed-toolbar ui-panel-animate ui-panel-content-fixed-toolbar-closed" role="banner"><div class="course-pic"></div>
+<div class="course-title"><div class="course-title-num"></div><div class="course-title-name"></div></div>
+<div class="course-teacher"></div>
+<div class="back-home"></div></div>
+<div class="ui-panel-content-wrap ui-body-c ui-panel-animate ui-panel-content-wrap-closed"><div data-role="content" class="ui-content" role="main">
+<div class="sidebar"></div>
+<div class="main"></div></div></div>
+<div class="ui-panel-dismiss" data-panelid="panel"></div></div>
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div></body></html> 

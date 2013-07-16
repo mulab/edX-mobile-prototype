@@ -13,6 +13,7 @@ var initHeader = function(bodyInner){
 	var pro_img_list = [];
 	var root_path;
 	var debug = false;
+	var storage = window.localStorage;
 	//field define end
 
 	//method define
@@ -54,8 +55,11 @@ var initHeader = function(bodyInner){
 		}
 	}
 	var getcoursepath = function(){
-		root_path = "../data/2013_Spring_Tsinghua/";
-		debug = true;
+		if(storage.hasOwnProperty("raw_coursepath")){
+            root_path = storage.getItem("raw_coursepath");
+        }
+        else root_path = "../data/2013_Spring_Tsinghua/";
+        debug = false;	
 	}
 	//main
 	getcoursepath();
