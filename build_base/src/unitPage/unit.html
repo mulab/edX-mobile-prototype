@@ -30,13 +30,12 @@
             <div id="nav_scroll">
                 <div data-role="controlgroup" data-type="horizontal" id="nav_scroll_container">
                     <script>
-                        //coursePath = localStorage.getItem('coursepath');
-                        coursePath = '../../../data/2013_Spring_Tsinghua/';
-                        verticalIndex = 0;
-                        //verticalIndex = localStorage.getItem('verticalIndex');
-                        //p = $.parseJSON(localStorage.getItem('unitData'));
-
-                        p = obj[3].sequentials[0];
+                        coursePath = localStorage.getItem('coursepath');
+                        verticalIndex = localStorage.getItem('verticalIndex');
+                        p = $.parseJSON(localStorage.getItem('unitData'));
+                        //coursePath = '../../../data/2013_Spring_Tsinghua/';
+                        //verticalIndex = 0;
+                        //p = obj[3].sequentials[0];
                         if(p!=null)
                         {
                             if(p.display_name)
@@ -46,7 +45,10 @@
                             for(var i in p.verticals)
                             {
                                 var tmp = p.verticals[i];
-                                if(tmp.display_name==null)tmp.display_name="Untitled";
+                                if(tmp.display_name==null) {
+                                    //tmp.display_name="Untitled";
+                                    tmp.display_name = tmp.components[0].type;
+                                }
                                 if(tmp.components==null)continue;
                                 if(tmp.components[0].type=="problem")
                                 {
