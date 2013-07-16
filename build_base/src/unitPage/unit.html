@@ -21,8 +21,8 @@
 </div>
 <div data-role="content">
         <div style="width:100%;">
-        <div style="float: left">
-            <div style="background-color: #ffffff">
+        <div style="float: left; position: fixed; left: 0; top: 3.5em">
+            <div>
             <a href="#" id="left_button" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="left" data-inline="true">Left</a>
             </div>
         </div>
@@ -72,18 +72,18 @@
                 </div>
             </div>
         </div>
-        <div style="float:right; position: relative; top: -3.5em">
-            <div style="background-color: #ffffff; z-index: 10000">
+        <div style="float:right; position: fixed; top: 3.5em; right: 1em;">
+            <div style=" z-index: 10000">
             <a href="#" id="right_button" data-role="button" data-theme="b" data-icon="arrow-r" data-iconpos="right" data-inline="true">Right</a>
             </div>
         </div>
         </div>
-        <div id="content_holder">
+        <div id="content_holder" style="min-height: 100%">
 
         </div>
 </div>
-<div data-role="footer">
-
+<div data-role="footer" data-position="fixed">
+    <h1>edX mobile</h1>
 </div>
 </body>
 </html>

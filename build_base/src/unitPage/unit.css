@@ -8,11 +8,18 @@
     position: relative;
 }
 #nav_scroll_holder {
-    margin-left: 5em;
-    margin-right: 7em;
+    position: fixed;
+    left: 7em;
+    right: 7em;
+    top: 3.5em;
     overflow: hidden;
 }
 .horizontalButton{
     float: none;
     display: inline-block;
+}
+.ui-content {
+    position: absolute;
+    top:43px;
+    bottom: 44px;
 }
