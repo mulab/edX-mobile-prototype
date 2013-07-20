@@ -16,10 +16,12 @@
     <script>
         $(document).ready(function(){
             $('#link1').click(function(){
+                $.mobile.loading( "show");
                 localStorage.setItem('raw_coursepath','../data/2013_Spring_Tsinghua/');
                 self.location.href = '../../coursePage_build.html';
             });
             $('#link2').click(function(){
+                $.mobile.loading( "show");
                 localStorage.setItem('raw_coursepath','../data/Software_as_a_Service/');
                 self.location.href = '../../coursePage_build.html';
             });

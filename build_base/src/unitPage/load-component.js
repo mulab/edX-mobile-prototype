@@ -10,7 +10,7 @@ var getHTML = function(coursepath, url_name) {
 		$.ajaxSetup({async:true});
 		return dom;
 	} else {
-		return $(XMLtoString(xmlDom));
+		return XMLtoString(xmlDom);
 	}
 }
 

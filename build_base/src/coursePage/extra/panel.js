@@ -24,6 +24,7 @@ var initPanel = function(bodyInner) {
 
     function clearDone(num) {
         $(verticallist.find("li")[num]).css('opacity', '1.0');
+        //$(verticallist.find("li")[num]).animate({'opacity':'1.0'},200);
     };
 
     function clearDoneAll() {
@@ -263,6 +264,7 @@ var initPanel = function(bodyInner) {
                                 "verticalIndex": verticalIndex
                             }, function(event) {
                                 //window.location.href = "./src/unitPage/unit.html";
+                                $.mobile.loading( "show");
                                 storage.setItem("verticalIndex", event.data.verticalIndex);
                                 self.location.href = "./src/unitPage/unit.html";
                             });
