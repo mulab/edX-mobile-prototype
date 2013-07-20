@@ -32,7 +32,7 @@ var initPanel = function(bodyInner) {
     };
 
     function makeSpan(){
-        return '<span class="colorTag" style="background-color: #ff0000; width:1em;height:100%;position:absolute;top:0;left:0;"></span>';
+        return '<span class="colorTag" style="background-color: '+randomColor()+'; width:1em;height:100%;position:absolute;top:0;left:0;"></span>';
     };
 
     function setFocus(week, sub) {
@@ -70,9 +70,9 @@ var initPanel = function(bodyInner) {
         else{
             $(weeklist.find("li")[lastFocus[0]]).css('background-color', makeColor(defaultColor));
             $(weeklist.find("li")[week]).css('background-color', makeColor(highlightColor));
-            sublist.find("li>.colorTag").each(function(index, element) {
-                $(element).css('background-color', randomColor());
-            });
+            // sublist.find("li>.colorTag").each(function(index, element) {
+                // $(element).css('background-color', randomColor());
+            // });
             thisColor = $(sublist.find("li>.colorTag")[sub]).css('background-color');
             $(sublist.find("li")[sub]).css('background-color', thisColor);
             verticallist.find("li").css('background-color', thisColor);
@@ -89,9 +89,9 @@ var initPanel = function(bodyInner) {
     var displayHack = function() {
         //verticallist.addClass("ui-sidetag-panel-closed");
         //sidetag.css("width", $("div:jqmData(role='panel')").css("height"));
-        sublist.find("li>.colorTag").each(function(index, element) {
-            $(element).css('background-color', randomColor());
-        });
+        // sublist.find("li>.colorTag").each(function(index, element) {
+            // $(element).css('background-color', randomColor());
+        // });
         thisColor = $(sublist.find("li>.colorTag")[0]).css("background-color");
         setFocus(lastFocus[0],lastFocus[1]);
         verticallist.listview("refresh");
@@ -229,8 +229,10 @@ var initPanel = function(bodyInner) {
             var display_name = (chapter.hasOwnProperty("display_name")) ? chapter["display_name"] : chapter["url_name"];
             weeklist.append("<li>" + display_name + "</li>");
             $(weeklist.children("li")[chapterIndex]).click({
-                "chapter": chapter
+                "chapter": chapter,
+				"chapterIndex": chapterIndex
             }, (function(event) {
+				if (event.data.chapterIndex==lastFocus[0] && $.trim(sublist.html())!="")return;
                 var sequentials = event.data.chapter["sequentials"];
                 var sidetag_week = (event.data.chapter.hasOwnProperty("display_name")) ? event.data.chapter["display_name"] : event.data.chapter["url_name"];
                 sublist.html("");
