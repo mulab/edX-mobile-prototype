@@ -69,6 +69,6 @@ $(document).ready(function(){
     $('#right_button').click(function(){verticalControl.turnRight();});
     //$('div[data-role=content]').trigger('create');
     verticalControl.move(verticalIndex);
-    $('#content_holder').on('swipeleft', function(){verticalControl.turnRight();});
-    $('#content_holder').on('swiperight', function(){verticalControl.turnLeft();});
+    $(document).on('swiperight', function(){verticalControl.turnLeft();});
+    $(document).on('swipeleft', function(){verticalControl.turnRight();});
 });
