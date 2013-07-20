@@ -3177,6 +3177,7 @@ div.ui-slider-switch.ui-mini {
 .ui-panel-content-wrap {
 	position: relative;
 	left: 25%;
+	width:75%;
 	min-height: inherit;
 	border: none;
 	z-index: 999;
