@@ -37,7 +37,7 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
                 }
             }
         }
-        console.log(content);
+        //console.log(content);
         unitHtml = unitHtml.split("<!-- nav -->").join(content);
         $('div[data-role="page"]:last').after(unitHtml);
 
@@ -116,6 +116,10 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             verticalControl.move(verticalIndex);
             $('#unit').on('swiperight', function(){verticalControl.turnLeft();});
             $('#unit').on('swipeleft', function(){verticalControl.turnRight();});
+
+            $('#unit_returnButton').click(function(){
+                $.mobile.changePage($('#course'),{dataUrl: $('base').attr('href')});
+            });
         }
     };
     return {
