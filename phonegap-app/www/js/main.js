@@ -18,6 +18,11 @@ require.config({
         dashboard:'modules/dashboardPage/dashboard',
         course:'modules/coursePage/course',
         unit:'modules/unitPage/unit'
+    },
+    shim:{
+        'js/underscore':{
+            exports:'_'
+        }
     }
 });
 require(['jquery','dashboard'],function($,dashboard){

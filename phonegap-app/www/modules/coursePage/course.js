@@ -10,13 +10,11 @@ define(['jquery', 'text!modules/coursePage/course.html', 'modules/coursePage/hea
         $('div[data-role="page"]:last').after(courseHtml);
         require(['jqm'], function () {
         });
-//        $(document).on('pageload', function (event, data) {
         var $course = $("#course");
-        $.mobile.changePage($course, {dataUrl: $('base').attr('href')});
+        $.mobile.changePage($course, {dataUrl: $('base').attr('href')})
         header.initialize($course);
         panel.initialize($course);
         content.initialize($course);
-//        });
     };
     return {
         initialize: init

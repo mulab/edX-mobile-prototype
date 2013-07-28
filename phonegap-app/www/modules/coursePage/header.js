@@ -40,16 +40,6 @@ define(['jquery', 'dashboard', 'util', 'text!modules/coursePage/header.html'], f
             course_pic.append("<img src='" + course_img_path + "'/>");
         }
 
-        function bind(){
-            back_home.click(function(){
-//               require(['dashboard'],function(dashboard){
-//                   dashboard.initialize();
-//               });
-                //dashboard.initialize();
-                $.mobile.changePage($("#dashboard"),{});
-            });
-        }
-
         function get_course_path() {
             if (storage.hasOwnProperty("raw_coursepath")) {
                 course_path = storage.getItem("raw_coursepath");
