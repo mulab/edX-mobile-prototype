@@ -84,6 +84,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html', 'unit'], functio
             $verticalList.find("li").each(function (index, element) {
                 $(element).on("click", {verticalIndex: index}, function (event) {
                     storage.setItem("verticalIndex", event.data.verticalIndex);
+                    storage.setItem("unitData", JSON.stringify(panelTree[lastFocus.week].sequentials[lastFocus.sub]));
                     unit.initialize();
                 });
             });
