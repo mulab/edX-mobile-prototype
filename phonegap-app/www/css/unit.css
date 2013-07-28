@@ -9,8 +9,8 @@
 }
 #nav_scroll_holder {
     position: fixed;
-    left: 7em;
-    right: 7em;
+    left: 8.5em;
+    right: 8.5em;
     top: 3.5em;
     overflow: hidden;
     z-index: 10999;
