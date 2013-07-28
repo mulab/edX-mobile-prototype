@@ -28,7 +28,6 @@ define(['jquery', 'dashboard', 'util', 'text!modules/coursePage/header.html'], f
         loadTeacher();
         loadCourseImage();
         render();
-        bind();
         back_home.trigger("create");
 
         function render() {
