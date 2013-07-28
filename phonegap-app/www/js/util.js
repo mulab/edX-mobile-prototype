@@ -22,7 +22,19 @@ define([],function () {
         }
         return xmlDom;
     }
+
+    function XMLtoString(elem) {
+        var serialized;
+        try {
+            serializer = new XMLSerializer();
+            serialized = serializer.serializeToString(elem);
+        } catch (e) {
+            serialized = elem.xml;
+        }
+        return serialized;
+    }
     return {
-        loadXmlFile:loadXmlFile
+        loadXmlFile:loadXmlFile,
+        XMLtoString:XMLtoString
     };
 });

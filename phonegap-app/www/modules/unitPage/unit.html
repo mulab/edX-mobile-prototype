@@ -1,0 +1,72 @@
+<div data-role="page" id="unit" data-url="./">
+    <div data-role="header">
+        <a href="javascript: self.location.href = '../../coursePage_build.html'" data-icon="arrow-l">Return</a>
+
+        <h1 id="title">Vertical_Name</h1>
+    </div>
+    <div data-role="content">
+        <div style="width:100%;">
+            <div style="background-color: #ffffff; opacity:0.8; position: fixed; top: 3.5em; left: 0; right: 0; z-index: 10998; height: 3.4em"></div>
+            <div style="float: left; position: fixed; left: 0; top: 3.5em; z-index: 11000">
+                <div>
+                    <a href="#" id="left_button" data-role="button" data-theme="b" data-icon="arrow-l"
+                       data-iconpos="left" data-inline="true">Left</a>
+                </div>
+            </div>
+            <div id="nav_scroll_holder">
+                <div id="nav_scroll">
+                    <div data-role="controlgroup" data-type="horizontal" id="nav_scroll_container">
+                        <script>
+                            coursePath = localStorage.getItem('coursepath');
+                            verticalIndex = parseInt(localStorage.getItem('verticalIndex'));
+                            p = $.parseJSON(localStorage.getItem('unitData'));
+                            //coursePath = '../../../data/2013_Spring_Tsinghua/';
+                            //verticalIndex = 0;
+                            //p = obj[3].sequentials[0];
+                            if (p != null) {
+                                if (p.display_name)
+                                    $('#title').html(document.title = p.display_name);
+                                else
+                                    $('#title').html(document.title = p.url_name);
+                                for (var i in p.verticals) {
+                                    var tmp = p.verticals[i];
+                                    if (tmp.display_name == null) {
+                                        //tmp.display_name="Untitled";
+                                        tmp.display_name = tmp.components[0].type;
+                                    }
+                                    if (tmp.components == null)continue;
+                                    if (tmp.components[0].type == "problem") {
+                                        //$('#nav_scroll_container').append(
+                                        document.write(
+                                                '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton">' + tmp.display_name + '</a>'
+                                        );
+
+                                    }
+                                    else {
+                                        //$('#nav_scroll_container').append(
+                                        document.write(
+                                                '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton">' + tmp.display_name + '</a>'
+                                        );
+                                    }
+                                }
+
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div style="float:right; position: fixed; top: 3.5em; right: 1em; z-index: 11000">
+                <div style=" z-index: 10000">
+                    <a href="#" id="right_button" data-role="button" data-theme="b" data-icon="arrow-r"
+                       data-iconpos="right" data-inline="true">Right</a>
+                </div>
+            </div>
+        </div>
+        <div id="content_holder" style="min-height: 100%">
+
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>edX mobile</h1>
+    </div>
+</div>

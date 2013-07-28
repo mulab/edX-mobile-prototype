@@ -16,11 +16,12 @@ require.config({
         util:'js/util',
         text:'js/text',
         dashboard:'modules/dashboardPage/dashboard',
-        course:'modules/coursePage/course'
+        course:'modules/coursePage/course',
+        unit:'modules/unitPage/unit'
     }
 });
-require(['jquery','dashboard','text!modules/dashboardPage/dashboard.html'],function($,dashboard,dashboardHtml){
+require(['jquery','dashboard'],function($,dashboard){
     var $body = $('body');
-    $body.html(dashboardHtml);
-    dashboard.initialize();
+//    $body.html(dashboardHtml);
+    dashboard.initialize($body);
 });

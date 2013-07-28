@@ -5,10 +5,21 @@
  * Time: 上午3:22
  * To change this template use File | Settings | File Templates.
  */
-define(['jquery', 'course'], function ($, course) {
-        require(['jqm'], function () {
-        });
+define(['jquery', 'text!modules/dashboardPage/dashboard.html', 'course'], function ($, dashboardHtml, course) {
         var init = function () {
+            if (arguments.length > 0) {
+                var $container = arguments[0];
+                $container.html(dashboardHtml);
+                require(['jqm'], function () {
+                });
+            }
+            else {
+                $('div[data-role="page"]:last').after(dashboardHtml);
+                require(['jqm'], function () {
+                });
+                $.mobile.changePage($unit, {dataUrl: $('base').attr('href')});
+            }
+
             $('#link1').on("click", {value: 'data/2013_Spring_Tsinghua/'}, function (event) {
                 onClickHandler(event)
             });

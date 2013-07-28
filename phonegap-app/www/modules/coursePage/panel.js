@@ -5,7 +5,7 @@
  * Time: 下午2:55
  * To change this template use File | Settings | File Templates.
  */
-define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, util, panelHtml) {
+define(['jquery', 'util', 'text!modules/coursePage/panel.html', 'unit'], function ($, util, panelHtml, unit) {
     var init = function ($page) {
         require(['jqm'], function () {
         });
@@ -44,7 +44,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, ut
             $weekList = $page.find("ul#weeklist"),
             $subList = $page.find("ul#sublist"),
             $verticalList = $page.find("ul#verticallist"),
-            //sideTag = $page.find('.sidetag'),
+        //sideTag = $page.find('.sidetag'),
             storage = window.localStorage,
             panelTree = {};
 
@@ -61,6 +61,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, ut
             });
             bindWeekListClickHandler();
             bindSubListClickHandler();
+            bindVerticalListClickHandler();
         }
 
         function bindWeekListClickHandler() {
@@ -71,10 +72,19 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, ut
             });
         }
 
-        function bindSubListClickHandler(){
+        function bindSubListClickHandler() {
             $subList.find("li").each(function (index, element) {
                 $(element).on("click", {sub: index}, function (event) {
                     setListStatus(lastFocus.week, event.data.sub);
+                });
+            });
+        }
+
+        function bindVerticalListClickHandler() {
+            $verticalList.find("li").each(function (index, element) {
+                $(element).on("click", {verticalIndex: index}, function (event) {
+                    storage.setItem("verticalIndex", event.data.verticalIndex);
+                    unit.initialize();
                 });
             });
         }
@@ -212,6 +222,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, ut
         function renderColorTag() {
             $panel.find('li>.colorTag').each(function (index, element) {
                 $(element).css("background-color", getColor(index));
+                console.log(index + ":" + getColor(index));
             });
         }
 
@@ -229,21 +240,22 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, ut
 
         function renderSubListColor(sub) {
             if (isNaN(sub))throw new TypeError("week,sub must be a number");
-            var color = $($subList.find('li>.colorTag')[sub]).css("background-color");
-            $($subList.find('li')[sub]).css("background-color", color);
+            var _color = $($subList.find('li>.colorTag')[sub]).css("background-color");
+            $($subList.find('li')[sub]).css("background-color", _color);
             lastFocus.sub = sub;
-            return color;
+            return _color;
         }
 
         function setListStatus(week, sub) {
             clearListStatus();
             renderList($subList, getSubList(week));
             renderList($verticalList, getVerticalList(week, sub));
-            renderColorTag();
+            //renderColorTag();
             renderWeekListColor(week, makeColor(highlightColor));
-            var color = renderSubListColor(sub);
+            var color = (renderSubListColor)(sub);
             renderVerticalListColor(color);
             bindSubListClickHandler();
+            bindVerticalListClickHandler();
         }
 
         function clearListStatus() {
@@ -272,28 +284,39 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html'], function ($, ut
 
         function getSubList(iChapterIndex) {
             var subList = [];
-            var chapter = panelTree[iChapterIndex];
-            for (var i = 0; i < chapter.sequentials.length; i++) {
-                var sub = chapter.sequentials[i];
-                var sequential_name = (sub.hasOwnProperty("display_name")) ? sub["display_name"] : sub["url_name"];
-                //We need a color tag here;
-                sequential_name = '<span class="colorTag" style="width:1em;height:100%;position:absolute;top:0;left:0;"></span>' + sequential_name;
-                subList.push(sequential_name);
+            try {
+                var chapter = panelTree[iChapterIndex];
+                for (var i = 0; i < chapter.sequentials.length; i++) {
+                    var sub = chapter.sequentials[i];
+                    var sequential_name = (sub.hasOwnProperty("display_name")) ? sub["display_name"] : sub["url_name"];
+                    //We need a color tag here;
+                    //And we must give every tag a color here,otherwise $.css() wouldn't get correct color due to transition
+                    sequential_name = '<span class="colorTag" style="width:1em;height:100%;position:absolute;top:0;left:0;background-color: ' + getColor(i) + ';"></span>' + sequential_name;
+                    subList.push(sequential_name);
+                }
+                listItemCount.sub = subList.length;
+            } catch (e) {
+                listItemCount.sub = 0;
+            } finally {
+                return subList;
             }
-            listItemCount.sub = subList.length;
-            return subList;
         }
 
         function getVerticalList(iChapterIndex, iSubIndex) {
             var verticalList = [];
-            var sub = panelTree[iChapterIndex].sequentials[iSubIndex];
-            for (var i = 0; i < sub.verticals.length; i++) {
-                var vertical = sub.verticals[i];
-                var vertical_name = (vertical.hasOwnProperty("display_name")) ? vertical["display_name"] : vertical["url_name"];
-                verticalList.push(vertical_name);
+            try {
+                var sub = panelTree[iChapterIndex].sequentials[iSubIndex];
+                for (var i = 0; i < sub.verticals.length; i++) {
+                    var vertical = sub.verticals[i];
+                    var vertical_name = (vertical.hasOwnProperty("display_name")) ? vertical["display_name"] : vertical["url_name"];
+                    verticalList.push(vertical_name);
+                }
+                listItemCount.vertical = verticalList.length;
+            } catch (e) {
+                listItemCount.vertical = 0;
+            } finally {
+                return verticalList;
             }
-            listItemCount.vertical = verticalList.length;
-            return verticalList;
         }
 
     };
