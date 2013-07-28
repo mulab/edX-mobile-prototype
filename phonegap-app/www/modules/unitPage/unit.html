@@ -1,6 +1,6 @@
 <div data-role="page" id="unit" data-url="./">
     <div data-role="header">
-        <a href="javascript: self.location.href = '../../coursePage_build.html'" data-icon="arrow-l">Return</a>
+        <a href="#" data-rel="back" data-icon="arrow-l">Return</a>
 
         <h1 id="title">Vertical_Name</h1>
     </div>
@@ -16,42 +16,7 @@
             <div id="nav_scroll_holder">
                 <div id="nav_scroll">
                     <div data-role="controlgroup" data-type="horizontal" id="nav_scroll_container">
-                        <script>
-                            coursePath = localStorage.getItem('coursepath');
-                            verticalIndex = parseInt(localStorage.getItem('verticalIndex'));
-                            p = $.parseJSON(localStorage.getItem('unitData'));
-                            //coursePath = '../../../data/2013_Spring_Tsinghua/';
-                            //verticalIndex = 0;
-                            //p = obj[3].sequentials[0];
-                            if (p != null) {
-                                if (p.display_name)
-                                    $('#title').html(document.title = p.display_name);
-                                else
-                                    $('#title').html(document.title = p.url_name);
-                                for (var i in p.verticals) {
-                                    var tmp = p.verticals[i];
-                                    if (tmp.display_name == null) {
-                                        //tmp.display_name="Untitled";
-                                        tmp.display_name = tmp.components[0].type;
-                                    }
-                                    if (tmp.components == null)continue;
-                                    if (tmp.components[0].type == "problem") {
-                                        //$('#nav_scroll_container').append(
-                                        document.write(
-                                                '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="grid" class="horizontalButton">' + tmp.display_name + '</a>'
-                                        );
-
-                                    }
-                                    else {
-                                        //$('#nav_scroll_container').append(
-                                        document.write(
-                                                '<a href="#" data-theme="c" data-role="button" data-iconpos="left" data-inline="true" data-icon="star" class="horizontalButton">' + tmp.display_name + '</a>'
-                                        );
-                                    }
-                                }
-
-                            }
-                        </script>
+                        <!-- nav -->
                     </div>
                 </div>
             </div>
