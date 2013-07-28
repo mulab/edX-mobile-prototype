@@ -62,7 +62,8 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             /*verticalControl.buttons = $('.horizontalButton');
              verticalControl.holder = $('#nav_scroll_holder');
              verticalControl.controler = $('#nav_scroll');*/
-            verticalControl.num = $('.horizontalButton').length;
+            //verticalControl.num = $('.horizontalButton').length;
+            verticalControl.num = p.verticals.length;
             var refresh = function() {
                 if(verticalControl.current==0)$('#left_button').addClass('ui-disabled');
                 else if(verticalControl.current==verticalControl.num-1)$('#right_button').addClass('ui-disabled');
