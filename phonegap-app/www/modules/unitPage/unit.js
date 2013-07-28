@@ -8,9 +8,13 @@
 define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-component'], function ($, unitHtml, loader) {
     var init = function () {
 
-        coursePath = localStorage.getItem('coursepath');
-        verticalIndex = parseInt(localStorage.getItem('verticalIndex'));
-        p = $.parseJSON(localStorage.getItem('unitData'));
+        if($('#unit').length > 0){
+            $('#unit').remove();
+        }
+
+        var coursePath = localStorage.getItem('coursepath');
+        var verticalIndex = parseInt(localStorage.getItem('verticalIndex'));
+        var p = $.parseJSON(localStorage.getItem('unitData'));
         //coursePath = '../../../data/2013_Spring_Tsinghua/';
         //verticalIndex = 0;
         //p = obj[3].sequentials[0];

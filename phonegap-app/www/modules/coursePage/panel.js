@@ -79,13 +79,18 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html', 'unit'], functio
                 });
             });
         }
-
+        var pending = false;
         function bindVerticalListClickHandler() {
             $verticalList.find("li").each(function (index, element) {
                 $(element).on("click", {verticalIndex: index}, function (event) {
+                    event.stopImmediatePropagation();
                     storage.setItem("verticalIndex", event.data.verticalIndex);
                     storage.setItem("unitData", JSON.stringify(panelTree[lastFocus.week].sequentials[lastFocus.sub]));
-                    unit.initialize();
+                    if(!pending){
+                        pending = true;
+                        unit.initialize();
+                        pending = false;
+                    }
                 });
             });
         }

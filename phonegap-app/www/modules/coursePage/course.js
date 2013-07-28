@@ -7,6 +7,11 @@
  */
 define(['jquery', 'text!modules/coursePage/course.html', 'modules/coursePage/header', 'modules/coursePage/panel', 'modules/coursePage/content'], function ($, courseHtml, header, panel, content) {
     var init = function () {
+
+        if ($('#course').length > 0) {
+            $('#course').remove();
+        }
+
         $('div[data-role="page"]:last').after(courseHtml);
         require(['jqm'], function () {
         });

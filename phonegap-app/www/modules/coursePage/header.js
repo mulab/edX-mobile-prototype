@@ -7,7 +7,8 @@
  */
 define(['jquery', 'dashboard', 'util', 'text!modules/coursePage/header.html'], function ($, dashboard, util, headerHtml) {
     var init = function ($page) {
-        require(['jqm'],function(){});
+        require(['jqm'], function () {
+        });
         $page.find("div:jqmData(role='header')").html(headerHtml);
         var course_pic = $page.find('.course-pic');
         var course_title_num = $page.find('.course-title-num');
