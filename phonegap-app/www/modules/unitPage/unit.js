@@ -19,7 +19,7 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
         //verticalIndex = 0;
         //p = obj[3].sequentials[0];
         var content = "";
-        console.log(p);
+        //console.log(p);
         if (p != null) {
             for (var i in p.verticals) {
                 var tmp = p.verticals[i];
@@ -52,15 +52,20 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             else
                 $('#title').html(p.url_name);
         }
-        require(['jqm'], function () {
-        });
+        require(['jqm'], function () {});
         var $unit = $("#unit");
         $.mobile.changePage($unit, {dataUrl: $('base').attr('href')});
-        {
+        //{
+        $(document).bind('pagechange',function(e, obj){
+            //alert('!');
+            console.log(obj);
+            if(obj.toPage!=$unit){return;}
+
             verticalControl = {};
             verticalControl.current = 0;
             verticalControl.start = 0;
             verticalControl.showNum = Math.floor($('#nav_scroll_holder').width() / $('.horizontalButton').width()) - 1;
+            console.log($('#nav_scroll_holder').width());
             if (verticalControl.showNum <= 0)
                 verticalControl.showNum = 1;
             //TODO: calculate showNum NOT according to fix width.
@@ -132,7 +137,8 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             $('#unit_returnButton').click(function(){
                 $.mobile.changePage($('#course'),{dataUrl: $('base').attr('href')});
             });
-        }
+
+        });
     };
     return {
         initialize: init
