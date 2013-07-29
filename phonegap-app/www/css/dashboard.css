@@ -9,3 +9,6 @@
 .ui-header{
     height: 3em;
 }
+
+#dashboard .ui-li {padding-bottom:50px;}
+#dashboard li img{max-height:100%;width:50em;}

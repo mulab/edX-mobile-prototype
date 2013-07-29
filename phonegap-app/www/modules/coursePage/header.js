@@ -33,10 +33,11 @@ define(['jquery', 'dashboard', 'util', 'text!modules/coursePage/header.html'], f
         back_home.trigger("create");
 
         function bind(){
-            back_home.click(function(){
+            back_home.on("click",function(event){
+				event.stopImmediatePropagation();
                 $.mobile.changePage($("#dashboard"));
             });
-        }
+		}
 
         function render() {
             course_title_name.text(course_title_name_text);
