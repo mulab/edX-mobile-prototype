@@ -19,6 +19,7 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
         //verticalIndex = 0;
         //p = obj[3].sequentials[0];
         var content = "";
+        console.log(p);
         if (p != null) {
             for (var i in p.verticals) {
                 var tmp = p.verticals[i];
@@ -38,8 +39,9 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             }
         }
         //console.log(content);
-        unitHtml = unitHtml.split("<!-- nav -->").join(content);
-        $('div[data-role="page"]:last').after(unitHtml);
+        var htmlTmp = unitHtml.split("<!-- nav -->").join(content);
+        console.log(htmlTmp);
+        $('div[data-role="page"]:last').after(htmlTmp);
         if(p != null)
         {
             if (p.display_name)
@@ -71,8 +73,8 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             verticalControl.num = p.verticals.length;
             var refresh = function() {
                 if(verticalControl.current==0)$('#left_button').addClass('ui-disabled');
-                else if(verticalControl.current==verticalControl.num-1)$('#right_button').addClass('ui-disabled');
-                else {
+                if(verticalControl.current==verticalControl.num-1)$('#right_button').addClass('ui-disabled');
+                if(verticalControl.current>0 && verticalControl.current<verticalControl.num-1) {
                     $('#left_button').removeClass('ui-disabled');
                     $('#right_button').removeClass('ui-disabled');
                 }
@@ -117,7 +119,7 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             }
 
             $('.horizontalButton').mouseup(function(){
-                verticalControl.move($(this).index()-1); // -1 because of <script> tag
+                verticalControl.move($(this).index()); // -1 because of <script> tag
                 //alert($(this).index());
             });
             $('#left_button').click(function(){verticalControl.turnLeft();});
