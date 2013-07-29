@@ -12,11 +12,15 @@ define(['jquery', 'text!modules/dashboardPage/dashboard.html', 'course'], functi
                 var $container = arguments[0];
                 $container.html(dashboardHtml);
                 require(['jqm'], function () {
+                    $.mobile.defaultPageTransition = "slide";
+                    console.log($.mobile.defaultPageTransition);
                 });
             }
             else {
                 $('div[data-role="page"]:last').after(dashboardHtml);
                 require(['jqm'], function () {
+                    $.mobile.defaultPageTransition = "slide";
+                    console.log($.mobile.defaultPageTransition);
                 });
                 $.mobile.changePage($("#dashboard"), {dataUrl: $('base').attr('href')});
             }
@@ -31,6 +35,7 @@ define(['jquery', 'text!modules/dashboardPage/dashboard.html', 'course'], functi
             $('#link2').on("click", {value: 'data/Software_as_a_Service/'}, function (event) {
                 onClickHandler(event);
             });
+
         };
 
         function onClickHandler(e) {
