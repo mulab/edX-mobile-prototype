@@ -215,7 +215,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html', 'unit'], functio
             if ($.isArray(listData)) {
                 var listString = "";
                 for (var i = 0; i < listData.length; i++) {
-                    listString += "<li>" + listData[i] + "</li>"
+                    listString += "<li><a>" + listData[i] + "</a></li>"
                 }
                 $container.append($(listString));
                 $container.listview("refresh");
@@ -226,7 +226,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html', 'unit'], functio
         }
 
         function renderColorTag() {
-            $panel.find('li>.colorTag').each(function (index, element) {
+            $panel.find('li .colorTag').each(function (index, element) {
                 $(element).css("background-color", getColor(index));
                 console.log(index + ":" + getColor(index));
             });
@@ -246,7 +246,7 @@ define(['jquery', 'util', 'text!modules/coursePage/panel.html', 'unit'], functio
 
         function renderSubListColor(sub) {
             if (isNaN(sub))throw new TypeError("week,sub must be a number");
-            var _color = $($subList.find('li>.colorTag')[sub]).css("background-color");
+            var _color = $($subList.find('li .colorTag')[sub]).css("background-color");
             $($subList.find('li')[sub]).css("background-color", _color);
             lastFocus.sub = sub;
             return _color;
