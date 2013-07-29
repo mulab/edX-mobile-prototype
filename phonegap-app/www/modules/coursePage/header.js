@@ -29,7 +29,14 @@ define(['jquery', 'dashboard', 'util', 'text!modules/coursePage/header.html'], f
         loadTeacher();
         loadCourseImage();
         render();
+        bind();
         back_home.trigger("create");
+
+        function bind(){
+            back_home.click(function(){
+                $.mobile.changePage($("#dashboard"));
+            });
+        }
 
         function render() {
             course_title_name.text(course_title_name_text);
