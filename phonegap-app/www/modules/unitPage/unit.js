@@ -45,7 +45,7 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
             if (p.display_name)
             {
                 $('#title').html(p.display_name);
-                alert(p.display_name);
+                //alert(p.display_name);
             }
             else
                 $('#title').html(p.url_name);
