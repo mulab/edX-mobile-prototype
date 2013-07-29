@@ -20,10 +20,6 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
         //p = obj[3].sequentials[0];
         var content = "";
         if (p != null) {
-            if (p.display_name)
-                $('#title').html(p.display_name);
-            else
-                $('#title').html(p.url_name);
             for (var i in p.verticals) {
                 var tmp = p.verticals[i];
                 if (tmp.display_name == null) {
@@ -44,7 +40,16 @@ define(['jquery', 'text!modules/unitPage/unit.html','modules/unitPage/load-compo
         //console.log(content);
         unitHtml = unitHtml.split("<!-- nav -->").join(content);
         $('div[data-role="page"]:last').after(unitHtml);
-
+        if(p != null)
+        {
+            if (p.display_name)
+            {
+                $('#title').html(p.display_name);
+                alert(p.display_name);
+            }
+            else
+                $('#title').html(p.url_name);
+        }
         require(['jqm'], function () {
         });
         var $unit = $("#unit");
